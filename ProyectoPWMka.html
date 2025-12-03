@@ -5,69 +5,103 @@ Apellidos: Mamani Kantuta -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="EstiloMka.css">
     <title>MkaFootball Academy</title>
     </head>
 <body>
  
     <header class="barra_superior">
         <div class="titulo_pag">
-            <img src="Images/MkaFootball Icon.png" alt="Logo Pagina">
-            <h1>MkaFootball Academy</h1>
-            <h3>El Futbol es mi Pasion</h3>
+            <div class="btn_hamburguesa">&#9776;</div>
+            <div class="opacidad_menu_lateral"></div>
+            <h1 class="tit_principal">MkaFootball Academy</h1>
+            <h2 class="tit_secundario">El Futbol es mi Pasion</h2>
+        </div>
+        <div class="logo">
+            <img src="Img/MkaFootball Icon.png" id="LogoMka" alt="Logo Pagina">
         </div>
         <div class="informacion_usuario">
             <div class="saludo">
-                <p>Hola, Andres</p>
-                <p class="correo_usuario">andresmamanikantuta@gmail.com</p>
+                <p id="saludo_usuario">Hola, Andres</p>
+                <p id="correo_usuario">andresmamanikantuta@gmail.com</p>
             </div>
             <a href="#" class="btn-salir">Salir</a>
         </div>
     </header>
- 
+
+    <aside class="menu_lateral">
+        <div class="contenido_lateral">
+            <img src="Img/MkaFootball Icon.png" id="LogoMka" alt="Logo">
+            <h2>MkaFootball</h2>
+        </div>
+
+        <nav class="contenido_menu">
+            <ul>
+                <li><a href="ProyectoPWMka.html" class="opc_menu">Inicio</a></li>
+                <li><a href="ContenidoTactica.html" class="opc_menu">Táctica</a></li>
+                <li><a href="ContenidoTecnica.html" class="opc_menu">Técnica</a></li>
+                <li><a href="#" class="opc_menu">Logros</a></li>
+                <li><a href="#" class="opc_menu">Progreso</a></li>
+                <li><a href="#" class="opc_menu">Artículos</a></li>
+            </ul>
+        </nav>
+
+        <a href="#" class="btn_cerrar_sesion">Salir</a>
+    </aside>
+
+
     <main class="interfaz_principal">
-        <h3>Elige tu Área de Aprendizaje</h3>
-        <p>Descubre contenido de alta calidad diseñado para mejorar tu juego.</p>
-        <p>Desde tacticas avanzadas hasta tecnicas fundamentales, todo lo que necesites esta aqui.</p>
+        <h3 id="txt_aprendizaje">Elige tu Área de Aprendizaje</h3>
+        <p id="txt_descripcion">Descubre contenido de alta calidad diseñado para mejorar tu juego.</p>
+        <p id="txt_descripcion">Desde tacticas avanzadas hasta tecnicas fundamentales, todo lo que necesites esta aqui.</p>
         <nav id="lst_opciones_adicionales">
             <article id="opc_articulos">
-                <img src="" alt="icn_articulo">
+                <img src="Img/ImgArticulos.png" alt="icn_articulo" id="icn_opc_adicionales">
                 <h4>Articulos</h4>
                 <p>Contenido Exclusivo</p>
             </article>
             <article id="opc_progreso">
-                <img src="" alt="icn_progreso">
+                <img src="Img/ImgProgreso.png" alt="icn_progreso" id="icn_opc_adicionales">
                 <h4>Progreso</h4>
                 <p>Seguimiento Detallado</p>
             </article>
             <article id="opc_logros">
-                <img src="" alt="icn_logros">
+                <img src="Img/ImgLogros.png" alt="icn_logros" id="icn_opc_adicionales">
                 <h4>Logros</h4>
                 <p>Desbloquea Premios</p>
             </article>
         </nav>
  
         <section class="opc_principales">
+
             <article class="opc_tactica">
+                <div class="fondo_opc">
+                    <img src="Img/FondoTactica.jpg" alt="Fondo Tactica" id="img_fondo">
+                </div>
                 <h3>Tactica</h3>
                 <p class="subtitulo">Domina el juego estrategico</p>
-                <p>Explora formaciones, sistemas de juego y estrategias utilizadas por los mejores equipos del mundo</p>
+                <p id="desc_cont">Explora formaciones, sistemas de juego y estrategias utilizadas por los mejores equipos del mundo</p>
                 <ul class="contenido_tactica">
                     <li>Formaciones 4-3-3, 4-4-2, 3-4-3 y mas...</li>
                     <li>Estrategias defensivas y presion media - alta</li>
                     <li>Progresiones desde zona 1 y zona 2</li>
                 </ul>
-                <a href="#">3 Contenidos disponibles...</a>
+                <a href="ContenidoTactica.html">6 Contenidos disponibles...</a>
             </article>
+
             <article class="opc_tecnica">
+                <div class="fondo_opc">
+                    <img src="Img/FondoTecnica.jpg" alt="Fondo Tecnica" id="img_fondo">
+                </div>
                 <h3>Tecnica</h3>
                 <p class="subtitulo">Perfecciona tus habilidades</p>
-                <p>Mejora tus habilidades individuales con ejercicios y tecnicas utilizadas por profesionales</p>
+                <p id="desc_cont">Mejora tus habilidades individuales con ejercicios y tecnicas utilizadas por profesionales</p>
                 <ul class="contenido_tecnica">
                     <li>Pase y control de balon</li>
                     <li>Desplazamientos y regates</li>
                     <li>Tiro a porteria</li>
                 </ul>
-                <a href="#">3 Contenidos disponibles...</a>
+                <a href="ContenidoTecnica.html">6 Contenidos disponibles...</a>
             </article>
         </section>
     </main>
@@ -75,9 +109,9 @@ Apellidos: Mamani Kantuta -->
     <section class="opc_rapida">
         <h4>Listo para mejorar tu juego?</h4>
         <p>Accede a contenido de primera, videos de entrenamientos y guias detalladas para que te conviertas en un mejor jugador</p>
-        <div id="btn_acceso_rapido">
-            <button id="btn_tactica">Explorar Tactica</button>
-            <button id="btn_tecnica">Explorar Tecnica</button>
+        <div id="acceso_rapido">
+            <a href="ContenidoTactica.html" class="link_tactica">Explorar Tactica</a>
+            <a href="ContenidoTecnica.html" class="link_tecnica">Explorar Tecnica</a>
         </div>
     </section>
  
@@ -137,5 +171,6 @@ Apellidos: Mamani Kantuta -->
         </div>
        
     </footer>
+<script src="FuncionalidadMka.js"></script>
 </body>
 </html>

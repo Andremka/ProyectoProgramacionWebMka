@@ -1,0 +1,461 @@
+/*Estilos generales*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+body{
+    background: #aeddfe;
+    color: black;
+}
+#LogoMka{
+    height: 80px;
+    width: 80px;
+}
+/*Barra Superior*/
+.barra_superior{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background: white;
+    color: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.titulo_pag{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 20px;
+}
+.tit_principal{
+    margin-left: 45px;
+    color: black;
+}
+.tit_secundario{
+    margin: 10px 0 0 45px;
+    line-height: 1;
+    color: aqua;
+}
+#saludo_usuario{
+    color: black;
+}
+#correo_usuario{
+    color: #0088D9;
+}
+.informacion_usuario{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.btn-salir{
+    background: #005B99;
+    padding: 8px 14px;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+.btn-salir:hover{
+    background: #003F6B;
+}
+/*Interfaz Pincipal (Main)*/
+.interfaz_principal{
+    padding: 40px 20px;
+    text-align: center;
+}
+/*Opciones Adicionales*/
+#lst_opciones_adicionales{
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    gap: 65px;
+    width: 100%;
+    margin-top: 35px;
+}
+#lst_opciones_adicionales article{
+    width: 250px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    border: 1px solid #eee;
+}
+#icn_opc_adicionales{
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#lst_opciones_adicionales h4{
+    margin: 5px 0;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+#lst_opciones_adicionales p{
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+#txt_aprendizaje{
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+#txt_descripcion{
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+/*Opciones Principales (Tecnica - Tactica)*/
+.opc_principales{
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 40px;
+    padding: 0 20px;
+}
+.fondo_opc{
+    height: 400px;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+#img_fondo{
+    border-radius: 25px;
+    position: relative;
+    padding: 5px;
+}
+.opc_tactica, .opc_tecnica{
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    width: 45%;
+    max-width: 570px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.opc_principales a{
+    margin: 25px 0 15px 60px;
+    display: block;
+    text-align: left;
+    padding-bottom: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #0072ff;
+}
+.opc_principales h3{
+    font-size: 25px;
+    margin-bottom: 3px;
+}
+.subtitulo{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.contenido_tactica, .contenido_tecnica{
+    text-align: left;
+    margin-left: 65px;
+    margin-top: 20px;
+}
+#desc_cont{
+    text-align:justify;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+/*Acceso Rapido a Tecnica - Tactica*/
+.opc_rapida{
+    max-width: 1175px;
+    margin: 40px auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #00bfff, #004d99);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,77,153,0.4);
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+.opc_rapida h4 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.opc_rapida p {
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+#acceso_rapido {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+#acceso_rapido a{
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 40px;
+    font-size: 1em;
+    font-weight: 600;
+    display: inline-block;
+    border: 2px solid;
+    background-color: white;
+}
+/*Pie de Pagina*/
+#pie_pagina{
+    background: #004d99;
+    color: white;
+    padding-top: 50px;
+    font-family: Arial, sans-serif;
+}
+#contenido_pie_pagina{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+.info_principal, .enlaces_contacto, .seccion_terminos_politicas, .redes_sociales{
+    padding: 15px;
+    min-width: 200px;
+    flex: 1;
+    margin-bottom: 30px;
+}
+.info_principal{
+    flex: 1.5;
+    max-width: 300px;
+}
+#pie_pagina h3{
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: white;
+}
+#pie_pagina h4{
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 5px;
+}
+.info_principal p, .redes_sociales p, .dir_contacto p {
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+.dir_contacto {
+    margin-top: 20px;
+}
+.enlaces_contacto ul, .seccion_terminos_politicas ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.enlaces_contacto li, .seccion_terminos_politicas li {
+    margin-bottom: 8px;
+}
+.enlaces_contacto a, .seccion_terminos_politicas a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+.icn_redes_sociales a{
+    text-decoration: none;
+    width: 35px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    font-size: 15px;
+}
+.suscripcion_noticias input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    width: 65%;
+    font-size: 0.9em;
+    color: #333; 
+}
+.suscripcion_noticias label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.suscripcion_noticias button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #00bfff; 
+    color: #ffffff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+.msj_pie_pagina {
+    text-align: center;
+    padding: 15px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); 
+    background-color: #003366; 
+    margin-top: 20px;
+}
+.msj_pie_pagina p {
+    font-size: 15px;
+    margin: 0;
+    opacity: 0.7;
+}
+/*Interfaz Tecnica y Tactica*/
+.interfaz_tecnica, .interfaz_tactica{
+    padding: 20px;
+}
+.barra_superior_tecnica, .barra_superior_tactica{
+    background: #0088D9;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 25px;
+}
+.contenido_tecnica, .contenido_tactica{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.seccion_tec, .seccion_tac{
+    background: white;
+    border-radius: 14px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.seccion_tec img, .seccion_tac img{
+    width: 100%;
+    border-radius: 10px;
+}
+.btn_ver{
+    margin-top: 8px;
+    display: inline-block;
+    background: #00A6FF;
+    padding: 8px 15px;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+.btn_ver:hover{
+    background: #0088D9;
+}
+/* --- Estilos del Botón de Hamburguesa --- */
+
+.btn_hamburguesa {
+    position: fixed; /* Fijo en la pantalla */
+    top: 15px;
+    left: 15px;
+    width: 40px;
+    height: 40px;
+    background-color: #00A6FF; /* Azul del menú */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1100; /* Siempre encima */
+}
+
+/* --- Estilos del Overlay de Opacidad --- */
+
+.opacidad_menu_lateral {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Oscurece el fondo */
+    opacity: 0; /* Inicialmente invisible */
+    visibility: hidden; /* No interactuable cuando está invisible */
+    transition: opacity 0.3s ease;
+    z-index: 900;
+}
+
+.opacidad_menu_lateral.activo {
+    opacity: 1;
+    visibility: visible;
+}
+/*Menu Lateral*/
+.menu_lateral {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background: #00A6FF; 
+    color: white;
+    padding: 20px 0;
+    transform: translateX(-100%); 
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+.menu_lateral.activo {
+    transform: translateX(0); 
+}
+.contenido_lateral {
+    display: flex;
+    align-items: center;
+    padding: 0 20px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
+}
+#LogoMka {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+.contenido_lateral h2 {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 0;
+}
+.contenido_menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.contenido_menu li {
+    margin: 5px 0;
+}
+.opc_menu {
+    display: block;
+    padding: 12px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+}
+.opc_menu.activo { 
+    background-color: #ffffff;
+    color: #00A6FF;
+    border-radius: 8px;
+    margin: 0 10px;
+}
+.btn_cerrar_sesion {
+    margin-top: auto; 
+    display: block;
+    text-align: center;
+    padding: 15px;
+    background-color: #033684;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
