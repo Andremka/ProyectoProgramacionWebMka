@@ -13,29 +13,33 @@ body{
     height: 80px;
     width: 80px;
 }
+@media (max-width: 1024px) {
+    #LogoMka {
+        height: 80px;
+        width: 80px;
+    }
+}
 /*Barra Superior*/
 .barra_superior{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 25px;
+    padding: 15px 40px;
     background: white;
-    color: white;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 .titulo_pag{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-right: 20px;
+    margin-right: 30px;
 }
 .tit_principal{
-    margin-left: 45px;
+    font-size: 2em;
     color: black;
 }
 .tit_secundario{
-    margin: 10px 0 0 45px;
-    line-height: 1;
+    font-size: 1.2em;
     color: aqua;
 }
 #saludo_usuario{
@@ -61,18 +65,17 @@ body{
     background: #003F6B;
 }
 /*Interfaz Pincipal (Main)*/
-.interfaz_principal{
-    padding: 40px 20px;
-    text-align: center;
-}
+
 /*Opciones Adicionales*/
 #lst_opciones_adicionales{
     padding: 30px 0;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     gap: 65px;
     width: 100%;
     margin-top: 35px;
+    flex-wrap: wrap;
 }
 #lst_opciones_adicionales article{
     width: 250px;
@@ -83,6 +86,26 @@ body{
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     overflow: hidden;
     border: 1px solid #eee;
+}
+#lst_opciones_adicionales article,
+.opc_tactica,
+.opc_tecnica {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar contenido dentro del card */
+}
+@media (max-width: 768px) {
+    .opc_principales {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    #lst_opciones_adicionales {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
 }
 #icn_opc_adicionales{
     width: 60px;
@@ -106,31 +129,65 @@ body{
     font-size: 40px;
     margin-top: 30px;
     margin-bottom: 20px;
+    text-align: center;
 }
 #txt_descripcion{
     font-size: 25px;
     margin-bottom: 5px;
+    text-align: center;
+}
+/* Animación para las tarjetas de opciones adicionales */
+#lst_opciones_adicionales article {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#lst_opciones_adicionales article:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+/* Animación para las tarjetas de contenidos */
+.tarjeta_contenido {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta_contenido:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 /*Opciones Principales (Tecnica - Tactica)*/
 .opc_principales{
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     gap: 35px;
-    margin-top: 40px;
-    padding: 0 20px;
+    max-width: 1175px;
+    margin: 40px auto; /* Centra el contenedor horizontalmente */
+    padding: 0 20px; /* Añade un pequeño padding para evitar que toque los bordes en pantallas muy pequeñas */
+    flex-wrap: wrap;
 }
 .fondo_opc{
-    height: 400px;
+    width: 100%;
+    height: auto; /* Ajusta automáticamente según el contenido */
     position: relative;
-    padding: 20px;
+    padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
 #img_fondo{
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: auto; /* Mantiene proporción */
     border-radius: 25px;
-    position: relative;
-    padding: 5px;
+    display: block;
+    margin-bottom: 15px;
+}
+.opc_tactica h3, .opc_tecnica h3,
+.opc_tactica p, .opc_tecnica p,
+.opc_tactica ul, .opc_tecnica ul {
+    padding: 0 15px;
+    text-align: center;
 }
 .opc_tactica, .opc_tecnica{
     background-color: white;
@@ -141,15 +198,25 @@ body{
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.opc_tactica:hover, .opc_tecnica:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+    cursor: pointer;
 }
 .opc_principales a{
-    margin: 25px 0 15px 60px;
-    display: block;
-    text-align: left;
-    padding-bottom: 20px;
+    display: inline-block;
+    text-align: center;   /* Centrado horizontal */
+    margin: 15px auto 20px auto; /* Centrado dentro del contenedor */
+    padding-bottom: 10px;
     font-weight: 600;
     text-decoration: none;
     color: #0072ff;
+    transition: color 0.2s ease;
+}
+.opc_principales a:hover {
+    color: #004d99; /* Cambio de color al pasar el cursor */
 }
 .opc_principales h3{
     font-size: 25px;
@@ -161,8 +228,14 @@ body{
 }
 .contenido_tactica, .contenido_tecnica{
     text-align: left;
-    margin-left: 65px;
-    margin-top: 20px;
+    margin: 20px auto 0 auto; /* Centra en pantallas pequeñas */
+    padding: 0 20px; /* Espaciado interno */
+    list-style-position: inside; /* Para que la viñeta no se corte */
+}
+.contenido_tactica li, .contenido_tecnica li {
+    font-size: 1em; /* Tamaño base, cambia con media queries */
+    line-height: 1.5;
+    margin-bottom: 8px;
 }
 #desc_cont{
     text-align:justify;
@@ -171,19 +244,44 @@ body{
     padding-bottom: 15px;
     padding-top: 15px;
 }
+@media (max-width: 768px) {
+    .opc_principales {
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .opc_tactica, .opc_tecnica {
+        width: 90%;
+    }
+
+    #desc_cont {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .contenido_tactica li, .contenido_tecnica li {
+        font-size: 0.95em;
+        margin-bottom: 6px;
+    }
+}
 /*Acceso Rapido a Tecnica - Tactica*/
-.opc_rapida{
+.opc_rapida {
     max-width: 1175px;
     margin: 40px auto;
     padding: 30px;
-    background: linear-gradient(135deg, #00bfff, #004d99);
+    background: linear-gradient(135deg, #00bfff, #004d99); /* Degradado original */
     border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,77,153,0.4);
+    box-shadow: 0 10px 20px rgba(0,77,153,0.4); /* Sombra original */
     text-align: center;
     color: white;
     position: relative;
     overflow: hidden;
+    background-size: cover; /* Ajusta el gradiente al tamaño */
+    background: linear-gradient(135deg, #00bfff, #004d99, #00bfff);
+    background-size: 400% 400%;
+    animation: gradientMovimiento 10s ease infinite;
 }
+
 .opc_rapida h4 {
     font-size: 1.8em;
     margin-bottom: 10px;
@@ -207,29 +305,61 @@ body{
     font-size: 1em;
     font-weight: 600;
     display: inline-block;
-    border: 2px solid;
+    border: 2px solid white;
     background-color: white;
+    color: #0072ff;
+    transition: all 0.3s ease;
+}
+#acceso_rapido a:hover {
+    background-color: #0072ff;
+    color: white;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+@media (max-width: 768px) {
+    .opc_rapida {
+        padding: 20px;
+        margin: 25px 15px;
+    }
+
+    .opc_rapida h4 {
+        font-size: 1.5em;
+    }
+
+    .opc_rapida p {
+        font-size: 1em;
+        line-height: 1.4;
+    }
+
+    #acceso_rapido {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #acceso_rapido a {
+        width: 100%;
+        text-align: center;
+    }
 }
 /*Pie de Pagina*/
-#pie_pagina{
-    background: #004d99;
+#pie_pagina {
+    background: #003366; /* Color más profundo */
     color: white;
     padding-top: 50px;
     font-family: Arial, sans-serif;
 }
-#contenido_pie_pagina{
+#contenido_pie_pagina {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
     flex-wrap: wrap;
+    gap: 25px; /* Espacio entre secciones */
 }
-.info_principal, .enlaces_contacto, .seccion_terminos_politicas, .redes_sociales{
-    padding: 15px;
-    min-width: 200px;
+.info_principal, .enlaces_contacto, .seccion_terminos_politicas, .redes_sociales {
     flex: 1;
-    margin-bottom: 30px;
+    min-width: 220px;
 }
 .info_principal{
     flex: 1.5;
@@ -249,6 +379,15 @@ body{
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     padding-bottom: 5px;
 }
+#pie_pagina h3, #pie_pagina h4 {
+    color: white;
+    font-weight: bold;
+}
+
+#pie_pagina h4 {
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 5px;
+}
 .info_principal p, .redes_sociales p, .dir_contacto p {
     font-size: 0.9em;
     line-height: 1.5;
@@ -266,20 +405,35 @@ body{
     margin-bottom: 8px;
 }
 .enlaces_contacto a, .seccion_terminos_politicas a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 0.9em;
+    color: #aeddfe;
+    transition: color 0.2s ease;
 }
-.icn_redes_sociales a{
-    text-decoration: none;
-    width: 35px;
-    height: 35px;
+.enlaces_contacto a:hover, .seccion_terminos_politicas a:hover {
+    color: #00bfff;
+}
+.icn_redes_sociales a {
+    display: inline-flex;
     justify-content: center;
     align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: #005B99;
     color: white;
     font-weight: bold;
-    display: flex;
+    font-size: 14px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+.icn_redes_sociales a:hover {
+    background-color: #00bfff;
+    transform: scale(1.1);
+}
+
+.suscripcion_noticias label {
+    display: block;
     font-size: 15px;
+    margin-bottom: 10px;
 }
 .suscripcion_noticias input {
     padding: 10px;
@@ -287,33 +441,51 @@ body{
     border-radius: 5px 0 0 5px;
     width: 65%;
     font-size: 0.9em;
-    color: #333; 
-}
-.suscripcion_noticias label {
-    display: block;
-    font-size: 15px;
-    margin-bottom: 10px;
 }
 .suscripcion_noticias button {
     padding: 10px 15px;
     border: none;
-    background-color: #00bfff; 
-    color: #ffffff;
+    background-color: #00bfff;
+    color: white;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
-    font-size: 0.9em;
+    transition: background 0.3s ease;
+}
+.suscripcion_noticias button:hover {
+    background-color: #0088d9;
 }
 .msj_pie_pagina {
     text-align: center;
     padding: 15px 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1); 
-    background-color: #003366; 
+    border-top: 1px solid rgba(255,255,255,0.2);
+    background-color: #00264d; 
     margin-top: 20px;
 }
 .msj_pie_pagina p {
-    font-size: 15px;
-    margin: 0;
+    font-size: 14px;
     opacity: 0.7;
+}
+@media (max-width: 768px) {
+    #contenido_pie_pagina {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .icn_redes_sociales a {
+        margin: 5px;
+    }
+
+    .suscripcion_noticias input {
+        width: 100%;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+
+    .suscripcion_noticias button {
+        width: 100%;
+        border-radius: 5px;
+    }
 }
 /*Interfaz Tecnica y Tactica*/
 .interfaz_tecnica, .interfaz_tactica{
@@ -354,15 +526,169 @@ body{
 .btn_ver:hover{
     background: #0088D9;
 }
-/* --- Estilos del Botón de Hamburguesa --- */
+/* ----- Barra superior ----- */
+.barra_superior_tecnica {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.barra_superior_tecnica h2 {
+    margin-top: 10px;
+}
+.barra_superior_tecnica h3 {
+    color: #005b99;
+    margin-bottom: 5px;
+}
+#cabecera_tactica, #cab_tecnica{
+    color: #033684;
+    font-size: larger;
+    background-color: white;
+}
+#cab_tecnica a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff; /* color del texto */
+    background-color: #0077cc; /* color de fondo */
+    padding: 10px 20px; /* espacio interno */
+    border-radius: 8px; /* bordes redondeados */
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* sombra */
+}
+#cabecera_tactica a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff; /* color del texto */
+    background-color: #0077cc; /* color de fondo */
+    padding: 10px 20px; /* espacio interno */
+    border-radius: 8px; /* bordes redondeados */
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* sombra */
+}
+#cabecera_tactica a:hover{
+    background-color: #005fa3; /* color más oscuro al pasar el mouse */
+    transform: translateY(-2px); /* pequeño levantamiento */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+#cab_tecnica a:hover{
+    background-color: #005fa3; /* color más oscuro al pasar el mouse */
+    transform: translateY(-2px); /* pequeño levantamiento */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+/* pantalla de contenidos */
+.pantalla_contenidos {
+    display: flex;
+    gap: 25px;
+}
 
+/* lista de izquierda (panel de contenidos) */
+.lst_contenidos {
+    width: 280px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    height: max-content;
+}
+.lst_contenidos h2 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+.tarjeta_contenido {
+    position: relative;
+    height: 100px; 
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.3s, box-shadow 0.3s;
+    filter: contrast(1.1) saturate(1.2); 
+}
+.tarjeta_contenido::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.2); /* transparente, legibilidad */
+    z-index: 0;
+}
+.tarjeta_contenido span {
+    position: relative;
+    z-index: 1; /* texto encima */ 
+}
+.tarjeta_contenido img {
+    width: 45px;
+    height: 45px;
+}
+.tarjeta_contenido:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+/* contenido para visualizar */
+.contenido_mostrado {
+    flex: 1;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.contenido_mostrado p,h4,h1,ul,li,ol,b{
+    margin-left: 20px;
+    margin-right: 25px;
+    color: #111;
+    font-family: "Segoe UI", sans-serif;
+    letter-spacing: 0.5px;   /* Espacio entre letras */
+    line-height: 1.5;        /*  legibilidad */
+}
+.contenido_detalle {
+    display: none;
+}
+.contenido_detalle.activo {
+    display: block;
+}
+
+/* diseño para celulares, tablets */
+@media (max-width: 1024px) {
+    .pantalla_contenidos {
+        flex-direction: column;
+    }
+    .lst_contenidos {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .barra_superior_tecnica {
+        text-align: center;
+    }
+    .tarjeta_contenido span {
+        font-size: 0.95em;
+    }
+    iframe {
+        width: 100% !important;
+        height: 230px !important;
+    }
+}
+/*  Estilos del Botón de Hamburguesa */
 .btn_hamburguesa {
-    position: fixed; /* Fijo en la pantalla */
+    position: fixed;
     top: 15px;
     left: 15px;
     width: 40px;
     height: 40px;
-    background-color: #00A6FF; /* Azul del menú */
+    background-color: #00A6FF;
     color: white;
     display: flex;
     align-items: center;
@@ -370,24 +696,26 @@ body{
     font-size: 26px;
     border-radius: 8px;
     cursor: pointer;
-    z-index: 1100; /* Siempre encima */
+    z-index: 1100;
+    transition: opacity 0.3s ease;
+}
+.btn_hamburguesa.oculto {
+    opacity: 0;
+    pointer-events: none; /* deshabilita clic mientras está oculto */
 }
 
-/* --- Estilos del Overlay de Opacidad --- */
-
+/*  Estilos del Overlay de Opacidad*/
 .opacidad_menu_lateral {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Oscurece el fondo */
-    opacity: 0; /* Inicialmente invisible */
-    visibility: hidden; /* No interactuable cuando está invisible */
-    transition: opacity 0.3s ease;
+    background: rgba(0, 0, 0, 0.5); 
+    opacity: 0; 
+    visibility: hidden; 
     z-index: 900;
 }
-
 .opacidad_menu_lateral.activo {
     opacity: 1;
     visibility: visible;
@@ -397,17 +725,21 @@ body{
     position: fixed;
     top: 0;
     left: 0;
-    width: 250px;
+    width: 300px;
     height: 100vh;
     background: #00A6FF; 
     color: white;
     padding: 20px 0;
-    transform: translateX(-100%); 
-    transition: transform 0.3s ease;
+    transform: translateX(-100%); /* menú oculto por defecto */
+    transition: width 0.3s ease;
     z-index: 1000;
     display: flex;
     flex-direction: column;
 }
+.menu_lateral.activo {
+    transform: translateX(0); /* menú visible al hacer clic */
+}
+
 .menu_lateral.activo {
     transform: translateX(0); 
 }
@@ -418,10 +750,11 @@ body{
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     margin-bottom: 20px;
 }
-#LogoMka {
+.LogoMka {
     width: 35px;
     height: 35px;
     margin-right: 10px;
+    border-radius: 10px;
 }
 .contenido_lateral h2 {
     font-size: 1.3em;
@@ -458,4 +791,302 @@ body{
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
+}
+/* Animación del menú lateral */
+.menu_lateral {
+    transform: translateX(-270px); /* oculto */
+    opacity: 0;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+}
+.menu_lateral.activo {
+    transform: translateX(0);
+    opacity: 1;
+}
+@media (min-width: 1025px) {
+    .btn_hamburguesa {
+        display: flex; /* siempre visible */
+    }
+}
+/* Overlay */
+.opacidad_menu_lateral {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease;
+}
+.opacidad_menu_lateral.activo {
+    visibility: visible;
+    opacity: 1;
+}
+.btn_hamburguesa {
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.btn_hamburguesa.oculto {
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+}
+.menu_lateral .opc_menu {
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.menu_lateral.activo .opc_menu {
+    opacity: 1;
+    transform: translateX(0);
+}
+.menu_lateral .opc_menu:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(5px);
+    transition: all 0.25s ease;
+}
+
+/* estilo de la lista de contenidos */
+.pantalla_contenidos {
+    display: flex;
+    gap: 25px;
+    margin-top: 25px;
+}
+/* lista de contenidos (izquierda) */
+.lst_contenidos {
+    width: 260px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.lst_contenidos h2 {
+    margin-bottom: 15px;
+    color: #0088D9;
+}
+.tarjeta_contenido {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #f4f7fb;
+    margin-bottom: 12px;
+    transition: 0.2s;
+}
+.tarjeta_contenido:hover {
+    transform: scale(1.05);
+}
+.tarjeta_contenido img {
+    width: 45px;
+    height: 45px;
+    border-radius: 6px;
+}
+
+/* contenido principal de tecnica y tactica*/
+.contenido_mostrado {
+    background: white;
+    flex: 1;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.contenido_detalle {
+    display: none;
+}
+
+.contenido_detalle.activo {
+    display: block;
+}
+
+.video_contenido {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-top: 15px;
+    border-radius: 12px;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .pantalla_contenidos {
+        flex-direction: column;
+    }
+
+    .lst_contenidos {
+        width: 100%;
+        height: auto;
+    }
+
+    .contenido_mostrado {
+        width: 100%;
+        padding: 15px;
+    }
+}
+/*mini ventana de aviso proximamente*/
+.aviso_prox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 25px 35px;
+    border-radius: 12px;
+    font-size: 1.1em;
+    text-align: center;
+    z-index: 2000;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+.aviso_prox.show {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+/* Menú lateral oculto */
+.menu_lateral {
+    transform: translateX(-270px);
+    opacity: 0;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+}
+.menu_lateral.activo {
+    transform: translateX(0);
+    opacity: 1;
+}
+/* Overlay */
+.opacidad_menu_lateral {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease;
+}
+.opacidad_menu_lateral.activo {
+    opacity: 1;
+    visibility: visible;
+}
+/* Animación de items del menú */
+.menu_lateral .opc_menu {
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.menu_lateral.activo .opc_menu {
+    opacity: 1;
+    transform: translateX(0);
+}
+/* Hover moderno */
+.menu_lateral .opc_menu:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(5px);
+}
+
+/* Botón hamburguesa animado */
+.btn_hamburguesa {
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.btn_hamburguesa.oculto {
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+}
+
+/* animaciones para el cambio de contenido*/
+
+.contenido_detalle {
+    display: none;
+    opacity: 0;
+    transform: translateY(15px);
+    pointer-events: none;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.contenido_detalle.activo {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Fade + slide para títulos y textos */
+.contenido_detalle h1,
+.contenido_detalle h4 {
+    animation: slideFade 0.6s ease forwards;
+}
+
+.contenido_detalle p,
+.contenido_detalle ul,
+.contenido_detalle ol {
+    animation: fadeIn 0.7s ease forwards;
+}
+
+@keyframes slideFade {
+    from { opacity: 0; transform: translateX(-10px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* estilo de imagenes de los contenidos */
+
+.img_contenido {
+    width: 50%;
+    max-width: 850px;
+    border-radius: 16px;
+    display: block;
+    margin: 18px auto;
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.img_contenido:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* videos responsivos */
+
+.contenido_detalle iframe {
+    width: 100%;
+    max-width: 900px;
+    height: 420px;
+    border-radius: 12px;
+    display: block;
+    margin: 22px auto;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.contenido_detalle iframe:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 768px) {
+    .contenido_detalle iframe {
+        height: 250px;
+    }
+}
+
+/* estilo para las tarjetas de contenido */
+
+.tarjeta_contenido {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    border-radius: 12px;
+    transition: transform 0.25s ease, background 0.25s ease;
+    cursor: pointer;
+}
+
+.tarjeta_contenido:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateX(5px);
+}
+
+.tarjeta_contenido img {
+    width: 55px;
+    height: 55px;
+    border-radius: 10px;
 }
