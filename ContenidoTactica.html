@@ -11,7 +11,7 @@
 
 <section class="interfaz_tactica">
 
-<header class="barra_superior_tecnica">
+<header class="barra_superior_tactica" id="cabecera_tactica">
     <a href="ProyectoPWMka.html">Volver</a> 
     <h2>Contenidos Tácticos</h2>
     <h3>6 Conceptos Disponibles</h3>
@@ -24,33 +24,27 @@
     <aside class="lst_contenidos">
         <h2>Contenidos</h2>
 
-        <div class="tarjeta_contenido" onclick="mostrarContenido('tac1')">
-            <img src="Images/tac1.png">
+        <div class="tarjeta_contenido" onclick="mostrarContenido('tac1')" style="background-image: url(Img/FondoStadium.jpg);">
             <span>Salida de Balón</span>
         </div>
 
-        <div class="tarjeta_contenido" onclick="mostrarContenido('tac2')">
-            <img src="Images/tac2.png">
+        <div class="tarjeta_contenido" onclick="mostrarContenido('tac2')" style="background-image: url(Img/FondoStadium.jpg);">
             <span>Ocupación de Espacios</span>
         </div>
 
-        <div class="tarjeta_contenido" onclick="mostrarContenido('tac3')">
-            <img src="Images/tac3.png">
+        <div class="tarjeta_contenido" onclick="mostrarContenido('tac3')" style="background-image: url(Img/FondoStadium.jpg);">
             <span>Transiciones Ofensivas</span>
         </div>
 
-        <div class="tarjeta_contenido" onclick="mostrarContenido('tac4')">
-            <img src="Images/tac4.png">
+        <div class="tarjeta_contenido" onclick="mostrarContenido('tac4')" style="background-image: url(Img/FondoStadium.jpg);">
             <span>Transiciones Defensivas</span>
         </div>
 
-        <div class="tarjeta_contenido" onclick="mostrarContenido('tac5')">
-            <img src="Images/tac5.png">
+        <div class="tarjeta_contenido" onclick="mostrarContenido('tac5')" style="background-image: url(Img/FondoStadium.jpg);">
             <span>Presión Alta</span>
         </div>
 
-        <div class="tarjeta_contenido" onclick="mostrarContenido('tac6')">
-            <img src="Images/tac6.png">
+        <div class="tarjeta_contenido" onclick="mostrarContenido('tac6')" style="background-image: url(Img/FondoStadium.jpg);">
             <span>Defensa en Bloque</span>
         </div>
     </aside>
@@ -58,7 +52,7 @@
 
         <div id="tac1" class="contenido_detalle activo">
             <h1>Salida de Balón</h1>
-            <img src="Images/tac1_referencia.jpg" alt="Salida de Balón" class="img_contenido">
+            <img src="Img/SalidaBalon.png" alt="Salida de Balón" class="img_contenido">
             <p>La Salida de Balón es uno de los principios tácticos ofensivos más cruciales en el fútbol moderno, especialmente en equipos que buscan la posesión y un ataque organizado. No se trata simplemente de pasar el balón desde el portero o los defensas, sino de un proceso meticulosamente coreografiado cuyo objetivo primordial es superar la primera línea de presión rival y establecer una fase de ataque organizada, progresando con el balón controlado hacia el campo contrario.</p>
             <h4>Descripcion Detallada:</h4>
             <p>El proceso comienza, idealmente, con el portero, quien actúa como un jugador de campo más, ofreciendo una superioridad numérica inicial contra el primer o segundo atacante rival (una ventaja de 3 vs 1 o 3 vs 2, por ejemplo). Los defensas centrales son las piezas angulares; se abren para estirar el campo horizontalmente y aumentar las distancias de presión para el rival. Simultáneamente, el pivote o mediocentro defensivo desciende o se sitúa en un intervalo específico (muchas veces entre o detrás de los centrales) para ofrecer una línea de pase segura. Esta estructura busca la creación de un "hombre libre" –un jugador que reciba sin marca– en la primera o segunda línea de construcción.Existen múltiples variantes, dependiendo de la presión rival:</p>
@@ -72,7 +66,7 @@
 
         <div id="tac2" class="contenido_detalle">
             <h1>Ocupación de Espacios</h1>
-            <img src="Images/tac2_referencia.jpg" alt="Ocupación de Espacios" class="img_contenido">
+            <img src="Img/OcupacionEspacios.png" alt="Ocupación de Espacios" class="img_contenido">
             <p>La Ocupación de Espacios es un principio fundamental del juego de posición que se centra en la distribución inteligente y racional de los jugadores sobre el terreno de juego, tanto con balón como, en anticipación, sin él. El objetivo primordial es maximizar las opciones de pase y crear y aprovechar constantemente las ventajas espaciales, posicionales y numéricas.</p>
             <h4>Descripcion Detallada:</h4>
             <p>Este concepto se basa en la idea de que el campo de fútbol está dividido en zonas o "pasillos" (central, intermedios y laterales), y que la clave para la progresión es tener siempre una estructura que garantice líneas de pase efectivas y una preparación inmediata para la pérdida. La regla de oro en muchas metodologías es la "no superposición" o la ocupación de los cinco carriles verticales (dos laterales, dos intermedios y uno central) y de las diferentes alturas u horizontales de manera que se maximice la amplitud y la profundidad.</p>
@@ -87,6 +81,7 @@
 
         <div id="tac3" class="contenido_detalle">
             <h1>Transiciones Ofensivas</h1>
+            <img src="Img/TransicionOfensiva.png" alt="Ocupación de Espacios" class="img_contenido">
             <p>La Transición Ofensiva es el momento en el que un equipo pasa de la fase defensiva (acaba de recuperar el balón) a la fase ofensiva (inicia el ataque). Es uno de los momentos más inestables y, por lo tanto, más productivos del juego, ya que el rival está generalmente desorganizado o desequilibrado.</p>
             <h4>Descripcion Detallada:</h4>
             <p>Este principio se enfoca en la velocidad y la verticalidad para aprovechar el desequilibrio defensivo del oponente. El tiempo que transcurre entre la recuperación y el ataque a la portería debe ser mínimo, buscando finalizar la jugada antes de que el rival pueda reorganizar sus líneas.</p>
@@ -101,6 +96,7 @@
 
         <div id="tac4" class="contenido_detalle">
             <h1>Transiciones Defensivas</h1>
+            <img src="Img/TransicionDefensiva.png" alt="Ocupación de Espacios" class="img_contenido">
             <p>La Transición Defensiva es la reacción inmediata que tiene un equipo en el momento que pierde la posesión del balón. Al igual que su contraparte ofensiva, es un momento de extrema vulnerabilidad, ya que la estructura del equipo (amplitud y profundidad) estaba dispuesta para atacar y no para defender.</p>
             <h4>Descripcion Detallada:</h4>
             <p>El objetivo principal de la transición defensiva es evitar que el rival pueda generar un ataque vertical y peligroso, dándole tiempo al equipo para reorganizar su estructura defensiva. Hay dos mecanismos principales:</p>
@@ -118,6 +114,7 @@
 
         <div id="tac5" class="contenido_detalle">
             <h1>Presión Alta</h1>
+            <img src="Img/PresionAlta.png" alt="Ocupación de Espacios" class="img_contenido">
             <p>La Presión Alta es una estrategia defensiva proactiva que se ejecuta en el campo rival con el objetivo de impedir o dificultar su Salida de Balón, forzar un error, una pérdida o un pase largo e impreciso, lo que a menudo resulta en una recuperación de balón en zonas de ataque.</p>
             <h4>Descripcion Detallada:</h4>
             <p>Se conoce también como defensa en Bloque Alto. Requiere un enorme esfuerzo físico, una coordinación milimétrica y un gran coraje, ya que expone mucho la espalda de la línea defensiva.</p>
@@ -141,6 +138,7 @@
 
         <div id="tac6" class="contenido_detalle">
             <h1>Defensa en Bloque</h1>
+            <img src="Img/DefensaBloque.png" alt="Ocupación de Espacios" class="img_contenido">
             <p>La Defensa en Bloque se refiere a la manera en que un equipo se organiza espacialmente cuando no tiene la posesión del balón, buscando reducir los espacios disponibles para el rival y minimizar el riesgo. El "bloque" implica que todas las líneas (defensa, mediocampo y ataque) se mueven y se mantienen compactas juntas, basculando coordinadamente en función de la posición del balón.</p>
             <h4>Descripcion Detallada:</h4>
             <p>El bloque puede ser Alto (ya cubierto en la Presión Alta), Medio o Bajo. La elección del bloque dependerá de la estrategia, el marcador, el tiempo de juego y el rival.</p>
