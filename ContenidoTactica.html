@@ -1,79 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="EstiloMka.css">
-    <title>Contenidos Tacticos</title>
+    <title>Contenidos Tácticos</title>
 </head>
+
 <body>
 
-    <section class="interfaz_tactica">
-        <header class="barra_superior_tactica">
-        <a href="ProyectoPWMka.html">Volver</a>
-        <h2>Contenidos Tacticos</h2>
-        <h3>6 Articulos Disponibles</h3>
-        <p>Explora formaciones, sistemas de juego y estrategias utilizadas por los mejores equipos del mundo</p>
-        </header>
+<section class="interfaz_tactica">
 
-        <div class="cont_tactica">
-            <h3>Articulos</h3>
+<header class="barra_superior_tecnica">
+    <a href="ProyectoPWMka.html">Volver</a> 
+    <h2>Contenidos Tácticos</h2>
+    <h3>6 Conceptos Disponibles</h3>
+    <p>Desarrolla tu comprensión del juego y la toma de decisiones.</p>
+</header>
 
-            <article class="seccion_tac">
-                <img src="Images/tactica1.png" alt="Formaciones de juego">
-                <div class="informacion_contenido">
-                    <h3>Formaciones - Esquema de Juego</h3>
-                    <p>4-3-3, 4-4-2, 3-5-2, análisis de flexibilidad y transiciones.</p>
-                    <a class="btn_ver" href="#">Ver contenido</a>
-                </div>
-            </article>
+<div class="pantalla_contenidos">
 
-            <article class="seccion_tac">
-                <img src="Images/tactica2.png" alt="Presión defensiva">
-                <div class="informacion_contenido">
-                    <h3>Presión y Defensa</h3>
-                    <p>Cómo aplicar presión alta, media o baja según el rival.</p>
-                    <a class="btn_ver" href="#">Ver contenido</a>
-                </div>
-            </article>
+    <!-- LISTA IZQUIERDA -->
+    <aside class="lst_contenidos">
+        <h2>Contenidos</h2>
 
-            <article class="seccion_tac">
-                <img src="Images/tactica3.png" alt="Progresión ofensiva">
-                <div class="informacion_contenido">
-                    <h3>Progresión Ofensiva</h3>
-                    <p>Salida desde zona 1, progresión en zona 2 y finalización en zona 3.</p>
-                    <a class="btn_ver" href="#">Ver contenido</a>
-                </div>
-            </article>
-
-            <article class="seccion_tac">
-                <img src="" alt="Transiciones">
-                <div class="informacion_contenido">
-                    <h3>Transiciones</h3>
-                    <p>De ataque a defensa y de defensa a ataque</p>
-                    <a class="btn_ver" href="#">Ver contenido</a>
-                </div>
-            </article>
-
-            <article class="seccion_tac">
-                <img src="" alt="Acciones a Balon Parado">
-                <div class="informacion_contenido">
-                    <h3>Acciones a Balon Parado</h3>
-                    <p>Saques de banda - lateral, saques de equina (corner), saques de meta, tiro libres, penales</p>
-                    <a class="btn_ver" href="#">Ver contenido</a>
-                </div>
-            </article>
-
-            <article class="seccion_tac">
-                <img src="Images/tactica3.png" alt="Progresión ofensiva">
-                <div class="informacion_contenido">
-                    <h3>Progresión Ofensiva</h3>
-                    <p>Salida desde zona 1, progresión en zona 2 y finalización en zona 3.</p>
-                    <a class="btn_ver" href="#">Ver contenido</a>
-                </div>
-            </article>
+        <div class="tarjeta_contenido" onclick="mostrarContenido('tac1')">
+            <img src="Images/tac1.png">
+            <span>Salida de Balón</span>
         </div>
-    </section>
 
+        <div class="tarjeta_contenido" onclick="mostrarContenido('tac2')">
+            <img src="Images/tac2.png">
+            <span>Ocupación de Espacios</span>
+        </div>
+
+        <div class="tarjeta_contenido" onclick="mostrarContenido('tac3')">
+            <img src="Images/tac3.png">
+            <span>Transiciones Ofensivas</span>
+        </div>
+
+        <div class="tarjeta_contenido" onclick="mostrarContenido('tac4')">
+            <img src="Images/tac4.png">
+            <span>Transiciones Defensivas</span>
+        </div>
+
+        <div class="tarjeta_contenido" onclick="mostrarContenido('tac5')">
+            <img src="Images/tac5.png">
+            <span>Presión Alta</span>
+        </div>
+
+        <div class="tarjeta_contenido" onclick="mostrarContenido('tac6')">
+            <img src="Images/tac6.png">
+            <span>Defensa en Bloque</span>
+        </div>
+    </aside>
+    <section class="contenido_mostrado">
+
+        <div id="tac1" class="contenido_detalle activo">
+            <h1>Salida de Balón</h1>
+            <img src="Images/tac1_referencia.jpg" alt="Salida de Balón" class="img_contenido">
+            <p>La Salida de Balón es uno de los principios tácticos ofensivos más cruciales en el fútbol moderno, especialmente en equipos que buscan la posesión y un ataque organizado. No se trata simplemente de pasar el balón desde el portero o los defensas, sino de un proceso meticulosamente coreografiado cuyo objetivo primordial es superar la primera línea de presión rival y establecer una fase de ataque organizada, progresando con el balón controlado hacia el campo contrario.</p>
+            <h4>Descripcion Detallada:</h4>
+            <p>El proceso comienza, idealmente, con el portero, quien actúa como un jugador de campo más, ofreciendo una superioridad numérica inicial contra el primer o segundo atacante rival (una ventaja de 3 vs 1 o 3 vs 2, por ejemplo). Los defensas centrales son las piezas angulares; se abren para estirar el campo horizontalmente y aumentar las distancias de presión para el rival. Simultáneamente, el pivote o mediocentro defensivo desciende o se sitúa en un intervalo específico (muchas veces entre o detrás de los centrales) para ofrecer una línea de pase segura. Esta estructura busca la creación de un "hombre libre" –un jugador que reciba sin marca– en la primera o segunda línea de construcción.Existen múltiples variantes, dependiendo de la presión rival:</p>
+            <ul>
+                <li><b>Salida Corta (o Elaborada):</b> Es la más arriesgada pero la que genera mayores ventajas si se ejecuta con éxito. Implica pases cortos y rápidos, buscando atraer al rival a zonas bajas para, posteriormente, encontrar el espacio a la espalda de la línea de presión adelantada. La clave es la perfilación (orientación corporal para recibir y pasar al siguiente toque) y el tercer hombre, un concepto donde el pase no va directo al hombre libre, sino al que permite que ese hombre libre juegue liberado o reciba con más tiempo.</li>
+                <li><b>Salida Larga (o Directa):</b> Se utiliza cuando el rival presiona muy alto y sin dejar espacios interiores, o cuando el riesgo de pérdida es muy elevado. Consiste en un golpeo largo del portero o un central, dirigido a un delantero o un mediocampista que gana la disputa aérea o ataca el espacio. Si bien sacrifica el control inicial, busca saltar la presión y transformar la jugada en un ataque rápido o una segunda jugada en campo rival.</li>
+            </ul>
+            <p>La ejecución exitosa de la salida de balón no solo facilita la progresión, sino que también desgasta física y mentalmente al rival que realiza la presión, ya que le obliga a correr grandes distancias sin éxito en la recuperación.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/S49G1czqA7I?si=3EuozeDBhe_INPB9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div id="tac2" class="contenido_detalle">
+            <h1>Ocupación de Espacios</h1>
+            <img src="Images/tac2_referencia.jpg" alt="Ocupación de Espacios" class="img_contenido">
+            <p>La Ocupación de Espacios es un principio fundamental del juego de posición que se centra en la distribución inteligente y racional de los jugadores sobre el terreno de juego, tanto con balón como, en anticipación, sin él. El objetivo primordial es maximizar las opciones de pase y crear y aprovechar constantemente las ventajas espaciales, posicionales y numéricas.</p>
+            <h4>Descripcion Detallada:</h4>
+            <p>Este concepto se basa en la idea de que el campo de fútbol está dividido en zonas o "pasillos" (central, intermedios y laterales), y que la clave para la progresión es tener siempre una estructura que garantice líneas de pase efectivas y una preparación inmediata para la pérdida. La regla de oro en muchas metodologías es la "no superposición" o la ocupación de los cinco carriles verticales (dos laterales, dos intermedios y uno central) y de las diferentes alturas u horizontales de manera que se maximice la amplitud y la profundidad.</p>
+            <ul>
+                <li><b>Amplitud y Profundidad:</b> Se busca estirar al máximo al equipo rival. Los extremos o laterales deben ocupar los carriles laterales para dar amplitud, obligando a la defensa rival a abrirse. Simultáneamente, un delantero debe fijar a los centrales en la línea de gol para dar profundidad, evitando que la defensa se adelante.</li>
+                <li><b>Posiciones Interiores Clave:</b> Los mediocampistas, interiores o mediapuntas, se ubican en los pasillos intermedios. Esta es la zona más rica tácticamente, ya que recibir allí permite atacar el centro o el lateral con las mejores perspectivas. Estos jugadores buscan recibir entre las líneas defensivas rivales (ej. entre el lateral y el central, o entre la línea de mediocentros y la de defensas), lo que se conoce como "espacios indefendibles".</li>
+                <li><b>Generación de Superioridades:</b> Una ocupación racional permite generar superioridades. La más evidente es la superioridad numérica (3 vs 2 en zona de balón), pero la más valiosa es la superioridad posicional (un jugador en mejor posición, por ejemplo, detrás de un rival que presiona) o la superioridad cualitativa (el mejor regateador recibiendo aislado).</li>
+            </ul>
+            <p>Una buena ocupación de espacios garantiza que, sin importar a dónde se mueva el balón, siempre haya un jugador ofreciendo apoyo, una línea de pase disponible y una estructura que minimice el riesgo de contraataque tras una pérdida.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/x6N6Bje0EQs?si=QZSrsJ6zhTY9opeD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div id="tac3" class="contenido_detalle">
+            <h1>Transiciones Ofensivas</h1>
+            <p>La Transición Ofensiva es el momento en el que un equipo pasa de la fase defensiva (acaba de recuperar el balón) a la fase ofensiva (inicia el ataque). Es uno de los momentos más inestables y, por lo tanto, más productivos del juego, ya que el rival está generalmente desorganizado o desequilibrado.</p>
+            <h4>Descripcion Detallada:</h4>
+            <p>Este principio se enfoca en la velocidad y la verticalidad para aprovechar el desequilibrio defensivo del oponente. El tiempo que transcurre entre la recuperación y el ataque a la portería debe ser mínimo, buscando finalizar la jugada antes de que el rival pueda reorganizar sus líneas.</p>
+            <ul>
+                <li><b>Activación Inmediata:</b>El instante de la recuperación es clave. El jugador que recupera debe tener la mentalidad de progresar rápidamente. La primera acción tras el robo es crítica: puede ser un pase vertical que rompa líneas o una conducción que fije la atención de los defensores rivales.</li>
+                <li><b>Verticalidad y Profundidad:</b>Se prioriza el movimiento hacia adelante, buscando la portería rival. Los jugadores atacantes deben realizar desmarques de ruptura (correr al espacio a la espalda de la defensa) con el objetivo de aprovechar el espacio que el rival deja debido a su repliegue incompleto. El pase debe ser, en la medida de lo posible, un pase en profundidad o un cambio de orientación que sitúe el balón en la zona más ventajosa para el ataque.</li>
+                <li><b>Apoyo a la Conducción/Pase:</b>Los compañeros deben acompañar la acción ofensiva. Si un jugador conduce, los otros deben abrirse para darle opciones de pase en los tres carriles (central y laterales) y cargar el área si es necesario. No se trata solo de correr, sino de ofrecer líneas de pase que permitan mantener la velocidad de la jugada.</li>
+                <li><b>Tipos:</b>Puede ser un "Contraataque puro" (un robo en zona defensiva con un recorrido muy largo) o un "Ataque Rápido" (un robo en campo contrario o mediocampo con pocos metros para avanzar). Ambos buscan la misma finalidad: explotar la momentánea inferioridad numérica o posicional del rival en defensa.</li>
+            </ul>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/TvqOJy2InLE?si=wVQoGQtia6UFmuxE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div id="tac4" class="contenido_detalle">
+            <h1>Transiciones Defensivas</h1>
+            <p>La Transición Defensiva es la reacción inmediata que tiene un equipo en el momento que pierde la posesión del balón. Al igual que su contraparte ofensiva, es un momento de extrema vulnerabilidad, ya que la estructura del equipo (amplitud y profundidad) estaba dispuesta para atacar y no para defender.</p>
+            <h4>Descripcion Detallada:</h4>
+            <p>El objetivo principal de la transición defensiva es evitar que el rival pueda generar un ataque vertical y peligroso, dándole tiempo al equipo para reorganizar su estructura defensiva. Hay dos mecanismos principales:</p>
+            <ul>
+                <li><b>La Presión Tras Pérdida (Contra-presión):</b>Conocida en la metodología alemana como Gegenpressing, esta acción busca recuperar el balón de forma inmediata (en un lapso de 3 a 6 segundos) y muy cerca de donde se perdió. Los jugadores más cercanos al poseedor del balón saltan agresivamente para evitar que el rival pueda dar un pase limpio y salir de la presión. Esta estrategia busca aprovechar la desorganización del rival que acaba de robar. Si se logra, se reactiva una transición ofensiva muy cerca de la portería rival.</li>
+                <li><b>El Repliegue Defensivo:</b>Si la presión tras pérdida es superada o no se puede ejercer de forma efectiva, el equipo debe correr hacia su propia portería para proteger los espacios más peligrosos. Los jugadores deben priorizar: <ol>
+                    <li><b>Cerrar el Carril Central:</b>Es la zona más directa para el ataque rival, por lo que es la prioridad a proteger.</li>
+                    <li><b>Temporizar al Poseedor:</b>El jugador más cercano debe ralentizar la conducción del atacante sin lanzarse, dando tiempo a sus compañeros para llegar y formar el bloque defensivo.</li>
+                    <li><b>Proteger la Espalda:</b>La línea defensiva debe retroceder y evitar que se les supere con pases en profundidad.</li>
+                </ol></li>
+            </ul>
+            <p>Una transición defensiva exitosa se mide por la capacidad de neutralizar el ataque rival y conseguir que el equipo vuelva a su estructura deseada (bloque alto, medio o bajo) lo más rápido posible, minimizando el riesgo de recibir un gol en ese lapso de desequilibrio.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/TvqOJy2InLE?si=wVQoGQtia6UFmuxE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div id="tac5" class="contenido_detalle">
+            <h1>Presión Alta</h1>
+            <p>La Presión Alta es una estrategia defensiva proactiva que se ejecuta en el campo rival con el objetivo de impedir o dificultar su Salida de Balón, forzar un error, una pérdida o un pase largo e impreciso, lo que a menudo resulta en una recuperación de balón en zonas de ataque.</p>
+            <h4>Descripcion Detallada:</h4>
+            <p>Se conoce también como defensa en Bloque Alto. Requiere un enorme esfuerzo físico, una coordinación milimétrica y un gran coraje, ya que expone mucho la espalda de la línea defensiva.</p>
+            <ul>
+                <li><b>Activación (El Trigger):</b>La presión no se ejerce todo el tiempo, sino que se "activa" cuando ocurren ciertas señales o triggers (desencadenantes). Los más comunes son:<ul>
+                    <li><b>Pase a Banda:</b>Cuando el central juega con el lateral, ya que el campo se reduce y se tienen menos opciones de pase.</li>
+                    <li><b>Pase Mal Dado o Control Deficiente:</b>Un error técnico del rival es la señal para el "salto" inmediato a presionar.</li>
+                    <li><b>Portero Recibiendo un Pase Atrás:</b>Obligándolo a despejar o a tomar una decisión arriesgada.</li>
+                </ul></li>
+                <li><b>Mecanismos de Presión:</b>
+                <ol>
+                    <li><b>Orientación y Embudo:</b>El equipo orienta la presión hacia una banda o una zona específica (creando un "embudo"), donde se busca generar una superioridad numérica (3 vs 2 o 4 vs 3).</li>
+                    <li><b>Tapar Líneas de Pase Clave:</b>Los delanteros y mediapuntas no solo presionan al poseedor, sino que se sitúan para interceptar o bloquear las líneas de pase hacia los centrocampistas rivales (pivote). Se busca hacer al rival predecible y forzarlo a jugar por donde el equipo quiere.</li>
+                    <li><b>El Hombre Libre Cerca:</b>Siempre debe haber un hombre libre que el equipo rival no puede presionar, pero la táctica de presión alta busca que ese hombre libre sea el portero o un defensa central lejano cuyo pase a un compañero resultaría largo y arriesgado.</li>
+                </ol>
+                </li>
+                <li><b>Compensación y Riesgo:</b>El equipo debe moverse como un bloque cohesionado, y la línea defensiva debe estar adelantada (cerca de la línea de medio campo) para mantener la compactibilidad del bloque. Esto crea el riesgo de ser superado con un balón largo a la espalda, lo que obliga a la defensa a dominar el fuera de juego y la velocidad de repliegue en caso de ser roto.</li>
+            </ul>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/u-ShC7N_P9Y?si=03C3WeQNDepSQi3v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div id="tac6" class="contenido_detalle">
+            <h1>Defensa en Bloque</h1>
+            <p>La Defensa en Bloque se refiere a la manera en que un equipo se organiza espacialmente cuando no tiene la posesión del balón, buscando reducir los espacios disponibles para el rival y minimizar el riesgo. El "bloque" implica que todas las líneas (defensa, mediocampo y ataque) se mueven y se mantienen compactas juntas, basculando coordinadamente en función de la posición del balón.</p>
+            <h4>Descripcion Detallada:</h4>
+            <p>El bloque puede ser Alto (ya cubierto en la Presión Alta), Medio o Bajo. La elección del bloque dependerá de la estrategia, el marcador, el tiempo de juego y el rival.</p>
+            <ul>
+                <li><b>El Bloque Medio:</b>Es la posición defensiva más equilibrada. El equipo espera al rival en la zona de mediocampo, con la línea de delanteros alrededor del círculo central y la línea defensiva cerca de la línea de 3/4. El objetivo es que el rival tenga dificultades para progresar desde la Zona 2 (mediocampo) a la Zona 3 (ataque) y forzar la pérdida o un pase atrás. Este bloque es ideal para equipos que buscan defender lejos de su área, pero sin el riesgo y desgaste de la presión alta.</li>
+                <li><b>El Bloque Bajo:</b>También conocido como "Defender cerca del Área". Es una estrategia de máxima contención. El equipo se repliega profundamente, con la línea defensiva sobre el borde del área grande y el mediocampo justo por delante, formando una estructura muy estrecha y compacta.
+                <ul>
+                    <li><b>Objetivo:</b>Eliminar el espacio más peligroso (dentro y alrededor del área). El rival es invitado a centrar balones o a intentar pases por fuera.</li>
+                    <li><b>Mecanismo:</b>Se enfoca en el marcaje zonal. Cada jugador cubre un espacio y no a un hombre específico. La clave es la Basculación Horizontal rápida, moviendo el bloque de lado a lado como un péndulo para estar siempre en superioridad numérica en la zona del balón.</li>
+                    <li><b>Riesgos/Ventajas:</b>Reduce drásticamente las ocasiones de gol en jugada elaborada, pero cede la iniciativa y el control del juego. Requiere una concentración y disciplina extremas. Además, es la base para lanzar los contraataques, buscando aprovechar los espacios que el rival deja al adelantar a sus jugadores.</li>
+                </ul>
+                </li>
+            </ul>
+            <p>La disciplina en la distancia entre las líneas (por ejemplo, entre defensas y mediocampistas) es esencial para evitar que el rival pueda recibir y girarse cómodamente en esos intervalos.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/PqKpX9BPzRs?si=7M2PPK8zNfWDmIbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+    </section>
+</div>
+
+</section>
+
+<script src="FuncionalidadMka.js"></script>
 </body>
 </html>
