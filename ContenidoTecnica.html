@@ -8,7 +8,7 @@
 </head>
 <body>
     <section class="interfaz_tecnica">
-        <header class="barra_superior_tecnica">
+        <header class="barra_superior_tecnica" id="cab_tecnica">
             <a href="ProyectoPWMka.html">Volver</a> 
             <h2>Contenidos Tecnicos</h2>
             <h3>6 Articulos Disponibles</h3>
@@ -20,33 +20,27 @@
     <aside class="lst_contenidos">
         <h2>Contenidos</h2>
 
-        <div class="tarjeta_contenido" onclick="mostrarContenido('cont1')">
-            <img src="Images/tec1.png">
+        <div class="tarjeta_contenido" onclick="mostrarContenido('cont1')" style="background-image: url(Img/FondoEstadium.jpg);">
             <span>Pase y Control</span>
         </div>
 
-        <div class="tarjeta_contenido" onclick="mostrarContenido('cont2')">
-            <img src="Images/tec2.png">
+        <div class="tarjeta_contenido" onclick="mostrarContenido('cont2')" style="background-image: url(Img/FondoEstadium.jpg);">
             <span>Regates y Movimientos</span>
         </div>
 
-        <div class="tarjeta_contenido" onclick="mostrarContenido('cont3')">
-            <img src="Images/tec3.png">
+        <div class="tarjeta_contenido" onclick="mostrarContenido('cont3')" style="background-image: url(Img/FondoEstadium.jpg);">
             <span>Tiro a Portería</span>
         </div>
 
-        <div class="tarjeta_contenido" onclick="mostrarContenido('cont4')">
-            <img src="Images/tec4.png">
+        <div class="tarjeta_contenido" onclick="mostrarContenido('cont4')" style="background-image: url(Img/FondoEstadium.jpg);">
             <span>Control Orientado</span>
         </div>
 
-        <div class="tarjeta_contenido" onclick="mostrarContenido('cont5')">
-            <img src="Images/tec5.png">
+        <div class="tarjeta_contenido" onclick="mostrarContenido('cont5')" style="background-image: url(Img/FondoEstadium.jpg);">
             <span>Recepción Bajo Presión</span>
         </div>
 
-        <div class="tarjeta_contenido" onclick="mostrarContenido('cont6')">
-            <img src="Images/tec6.png">
+        <div class="tarjeta_contenido" onclick="mostrarContenido('cont6')" style="background-image: url(Img/FondoEstadium.jpg);">
             <span>Perfil Corporal</span>
         </div>
     </aside>
@@ -56,6 +50,7 @@
 
         <div id="cont1" class="contenido_detalle activo">
             <h1>Pase y Control</h1>
+            <img src="Img/Pase.png" alt="Pase y Control" class="img_contenido">
             <p>El Pase y Control (o Recepción) son el alma del juego, la base sobre la que se construye cualquier acción ofensiva colectiva. La calidad y precisión de estos dos elementos determinan la velocidad, el ritmo y la fluidez con la que un equipo puede progresar y mantener la posesión del balón.</p>
             <h4>Descripcion Detallada</h4>
             <p>El Pase es la acción de enviar el balón a un compañero con una intención y precisión específicas. No se trata solo de mover el balón, sino de darle una ventaja al receptor:</p>
@@ -80,7 +75,7 @@
 
         <div id="cont2" class="contenido_detalle">
             <h1>Regates y Movimientos</h1>
-            <img src="Images/tec2_referencia.jpg" alt="Regates y Movimientos" class="img_contenido">
+            <img src="Img/Regate.jpg" alt="Regates y Movimientos" class="img_contenido">
             <p>Los Regates y Movimientos son las herramientas técnicas individuales utilizadas para superar a un adversario, generar un espacio de juego o escapar de la presión, creando así ventajas ofensivas.</p>
             <h4>Descripcion Detalllada</h4>
             <p>El Regate es la habilidad de conducir el balón sorteando a un rival. Su uso debe ser siempre funcional: no es un fin en sí mismo, sino un medio para progresar, desequilibrar o generar una superioridad.</p>
@@ -105,6 +100,7 @@
 
         <div id="cont3" class="contenido_detalle">
             <h1>Tiro a Portería</h1>
+            <img src="Img/TiroPorteria.png" alt="Tiro a Porteria" class="img_contenido">
             <p>El Tiro a Portería es la acción técnica de golpear el balón con la intención de introducirlo en la meta contraria. Es el momento cumbre del ataque y requiere una combinación de técnica depurada, precisión, potencia y, sobre todo, decisión.</p>
             <h4>Descripcion Detallada:</h4>
             <p>El éxito de un tiro no solo reside en la potencia, sino en la ejecución técnica y la toma de decisión rápida.</p>
@@ -131,6 +127,7 @@
 
         <div id="cont4" class="contenido_detalle">
             <h1>Control Orientado</h1>
+            <img src="Img/ControlOrientadoç.png" alt="Control Orientado" class="img_contenido">
             <p>El Control Orientado es una técnica de recepción avanzada donde el jugador, al mismo tiempo que controla el balón, lo dirige de inmediato al espacio, superando a un rival o preparándolo para la siguiente acción de ataque (pase, tiro o conducción), sin necesidad de un segundo toque para acomodarlo.</p>
             <h4>Descripcion Detallada</h4>
             <p>Esta técnica es una de las habilidades más distintivas de los jugadores de élite y es fundamental en el juego de posición.</p>
@@ -151,6 +148,7 @@
 
         <div id="cont5" class="contenido_detalle">
             <h1>Recepción Bajo Presión</h1>
+            <img src="Img/Recepcion.png" alt="Recepcion" class="img_contenido">
             <p>La Recepción Bajo Presión se refiere a la capacidad técnica y mental de un jugador para recibir y mantener el control del balón cuando un oponente está cerca, activo y buscando la intercepción o el robo.</p>
             <h4>Descripcion Detallada</h4>
             <p>Esta habilidad es un híbrido de técnica (Control) y táctica/mentalidad (Visión y Protección). Es crucial para los centrocampistas y defensas que construyen el juego.</p>
@@ -171,6 +169,7 @@
 
         <div id="cont6" class="contenido_detalle">
             <h1>Perfil Corporal</h1>
+            <img src="Img/PerfilCorporal.png" alt="Perfil Corporal" class="img_contenido">
             <p>El Perfil Corporal (o Perfilación) es la posición y orientación del cuerpo del jugador con respecto al balón, a los compañeros, a los rivales y a la portería, en el momento de la recepción o el pase. No es un movimiento, sino una postura previa que facilita la ejecución de la técnica posterior.</p>
             <h4>Descripcion Detallada:</h4>
             <p>Este concepto es puramente técnico-táctico. La correcta perfilación es el pre-requisito para ejecutar un control orientado o un pase efectivo.</p>
