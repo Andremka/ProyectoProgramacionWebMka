@@ -8,70 +8,183 @@
 </head>
 <body>
     <section class="interfaz_tecnica">
-    <header class="barra_superior_tecnica">
-        <a href="ProyectoPWMka.html">Volver</a> 
-        <h2>Contenidos Tecnicos</h2>
-        <h3>6 Articulos Disponibles</h3>
-        <p>Perfecciona tus habilidades individuales mediante entrenamiento progresivo.</p>
-    </header>
+        <header class="barra_superior_tecnica">
+            <a href="ProyectoPWMka.html">Volver</a> 
+            <h2>Contenidos Tecnicos</h2>
+            <h3>6 Articulos Disponibles</h3>
+            <p>Perfecciona tus habilidades individuales mediante entrenamiento progresivo.</p>
+        </header>
 
-    <div class="cont_tecnica">
+        <div class="pantalla_contenidos">
+            <!-- LISTA IZQUIERDA -->
+    <aside class="lst_contenidos">
+        <h2>Contenidos</h2>
 
-        <article class="seccion_tec">
-            <img src="Images/tecnica1.png" alt="Pase y control I">
-            <div class="informacion_contenido">
-                <h3>Pase y Control I</h3>
-                <p>Manera correcta de dar un pase y como controlarlo de forma facil.</p>
-                <a class="btn_ver" href="#">Ver contenido</a>
-            </div>
-        </article>
+        <div class="tarjeta_contenido" onclick="mostrarContenido('cont1')">
+            <img src="Images/tec1.png">
+            <span>Pase y Control</span>
+        </div>
 
-        <article class="seccion_tec">
-            <img src="Images/tecnica2.png" alt="Regates">
-            <div class="informacion_contenido">
-                <h3>Regates (Gambetas)</h3>
-                <p>Movimientos efectivos para superar rivales en espacio reducido.</p>
-                <a class="btn_ver" href="#">Ver contenido</a>
-            </div>
-        </article>
+        <div class="tarjeta_contenido" onclick="mostrarContenido('cont2')">
+            <img src="Images/tec2.png">
+            <span>Regates y Movimientos</span>
+        </div>
 
-        <article class="seccion_tec">
-            <img src="Images/tecnica3.png" alt="Tiro a portería">
-            <div class="informacion_contenido">
-                <h3>Definiciones</h3>
-                <p>Tiros colocados, potencia, voleas y remates técnicos.</p>
-                <a class="btn_ver" href="#">Ver contenido</a>
-            </div>
-        </article>
+        <div class="tarjeta_contenido" onclick="mostrarContenido('cont3')">
+            <img src="Images/tec3.png">
+            <span>Tiro a Portería</span>
+        </div>
 
-        <article class="seccion_tec">
-            <img src="Images/tecnica3.png" alt="Pase y Control II">
-            <div class="informacion_contenido">
-                <h3>Pase y Control II</h3>
-                <p>Pases aereos, control con distintas partes del cuerpo y diferentes formas de dar un pase.</p>
-                <a class="btn_ver" href="#">Ver contenido</a>
-            </div>
-        </article>
+        <div class="tarjeta_contenido" onclick="mostrarContenido('cont4')">
+            <img src="Images/tec4.png">
+            <span>Control Orientado</span>
+        </div>
 
-        <article class="seccion_tec">
-            <img src="" alt="Desmarques">
-            <div class="informacion_contenido">
-                <h3>Desmarques</h3>
-                <p>Movimientos esenciales para crear opciones de pase.</p>
-                <a class="btn_ver" href="#">Ver contenido</a>
-            </div>
-        </article>
+        <div class="tarjeta_contenido" onclick="mostrarContenido('cont5')">
+            <img src="Images/tec5.png">
+            <span>Recepción Bajo Presión</span>
+        </div>
 
-        <article class="seccion_tec">
-            <img src="" alt="Centros">
-            <div class="informacion_contenido">
-                <h3>Centros</h3>
-                <p>Pases largos realizados desde las bandas hacia el area del arquero rival.</p>
-                <a class="btn_ver" href="#">Ver contenido</a>
-            </div>
-        </article>
-    </div>
-</section>
+        <div class="tarjeta_contenido" onclick="mostrarContenido('cont6')">
+            <img src="Images/tec6.png">
+            <span>Perfil Corporal</span>
+        </div>
+    </aside>
 
+    <!-- CONTENIDO PRINCIPAL -->
+    <section class="contenido_mostrado">
+
+        <div id="cont1" class="contenido_detalle activo">
+            <h1>Pase y Control</h1>
+            <p>El Pase y Control (o Recepción) son el alma del juego, la base sobre la que se construye cualquier acción ofensiva colectiva. La calidad y precisión de estos dos elementos determinan la velocidad, el ritmo y la fluidez con la que un equipo puede progresar y mantener la posesión del balón.</p>
+            <h4>Descripcion Detallada</h4>
+            <p>El Pase es la acción de enviar el balón a un compañero con una intención y precisión específicas. No se trata solo de mover el balón, sino de darle una ventaja al receptor:</p>
+            <ul>
+                <li><b>Precisión y Fuerza:</b>El pase debe llegar a la posición ideal del receptor, ni muy fuerte para dificultar el control, ni muy suave para ser interceptado. La fuerza debe ser la justa para superar la distancia.</li>
+                <li><b>Superficies de Contacto:</b>La elección de la superficie es crucial: <ul>
+                    <li><b>Interior del Pie:</b>El más común y preciso, utilizado para pases cortos y medios.</li>
+                    <li><b>Empeine Total/Parcial:</b>Para pases largos, cambios de orientación, o pases con más potencia.</li>
+                    <li><b>Exterior del Pie (Tres Dedos):</b>Para pases curvos o rápidos que buscan sortear la pierna de un defensor.</li>
+                </ul></li>
+                <li><b>Intención (Pase de Ventaja):</b>El pase ideal es el que se dirige al espacio donde el compañero se va a mover, lo que se conoce como pase de ventaja o pase al espacio, permitiéndole al receptor progresar de inmediato sin tener que frenar su carrera.</li>
+            </ul>
+            <p>El <b>Control o Recepción</b> es la capacidad de detener, amortiguar o dirigir el balón inmediatamente después de recibir un pase, preparándolo para la siguiente acción.</p>
+            <ul>
+                <li><b>Amortiguación:</b>Usar la superficie de contacto elegida (pie, muslo, pecho, cabeza) para "suavizar" el impacto del balón, reduciendo su velocidad a cero o a un movimiento controlable.</li>
+                <li><b>Orientación (Control Orientado):</b>El mejor control es el que ya sitúa el balón en la dirección deseada para el siguiente movimiento (ver punto 4).</li>
+                <li><b>Recepción bajo Presión:</b>Requiere una gran visión espacial (perfil corporal) y mentalidad rápida para proteger el balón del rival y soltarlo al toque antes de ser despojado.</li>
+            </ul>
+            <p>Un alto porcentaje de éxito en pase y control permite al equipo rival correr detrás del balón, aumentando su desgaste y reduciendo sus opciones de recuperación.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/eM_VgIoDJwU?si=mDMlqKXTdyRKP6gA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div id="cont2" class="contenido_detalle">
+            <h1>Regates y Movimientos</h1>
+            <img src="Images/tec2_referencia.jpg" alt="Regates y Movimientos" class="img_contenido">
+            <p>Los Regates y Movimientos son las herramientas técnicas individuales utilizadas para superar a un adversario, generar un espacio de juego o escapar de la presión, creando así ventajas ofensivas.</p>
+            <h4>Descripcion Detalllada</h4>
+            <p>El Regate es la habilidad de conducir el balón sorteando a un rival. Su uso debe ser siempre funcional: no es un fin en sí mismo, sino un medio para progresar, desequilibrar o generar una superioridad.</p>
+            <ul>
+                <li><b>Tipos de Regate:</b>
+                <ul>
+                    <li><b>Regate en Corto (Dribbling):</b>Se utiliza en espacios reducidos (cerca del área o bajo presión), manteniendo el balón muy cerca del pie con toques suaves y rápidos para cambiar de dirección inesperadamente (ej. la elástica, el recorte, la bicicleta).</li>
+                    <li><b>Regate en Largo:</b>Se utiliza en campo abierto para superar al rival en velocidad después de un toque fuerte y controlado al espacio.</li>
+                </ul>
+                </li>
+                <li><b>El Engaño (Finta):</b>Es la parte más importante del regate. La finta corporal (un movimiento de hombro, un paso en falso) convence al defensor de que el atacante va a ir en una dirección, solo para cambiar y acelerar en la opuesta. El regate exitoso se basa en el tiempo y el desequilibrio del defensor.</li>
+            </ul>
+            <p>Los Movimientos sin balón complementan el regate y son vitales para el juego colectivo:</p>
+            <ul>
+                <li><b>Desmarque de Apoyo:</b>Acercarse al poseedor del balón para ofrecer una línea de pase segura, generalmente hacia atrás o en diagonal.</li>
+                <li><b>Desmarque de Ruptura (Desmarque al Espacio):</b>Moverse bruscamente desde una posición estática o de apoyo hacia el espacio libre (a la espalda del defensor) para recibir un pase que rompa líneas defensivas. Es crucial para dar profundidad al ataque.</li>
+                <li><b>Fijación:</b>Moverse para atraer a uno o más defensores a una zona específica, creando intencionalmente un espacio para un compañero.</li>
+            </ul>
+            <p>La combinación de un regate efectivo con un movimiento sin balón inteligente es la clave para desarmar defensas organizadas y acceder a zonas de finalización.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/XIxIZ_iT2vs?si=5kbep-__cFW35i89" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div id="cont3" class="contenido_detalle">
+            <h1>Tiro a Portería</h1>
+            <p>El Tiro a Portería es la acción técnica de golpear el balón con la intención de introducirlo en la meta contraria. Es el momento cumbre del ataque y requiere una combinación de técnica depurada, precisión, potencia y, sobre todo, decisión.</p>
+            <h4>Descripcion Detallada:</h4>
+            <p>El éxito de un tiro no solo reside en la potencia, sino en la ejecución técnica y la toma de decisión rápida.</p>
+            <ul>
+                <li><b>Superficies de Golpeo:</b>
+                <ul>
+                    <li><b>Empeine Total:</b>Se usa para la máxima potencia, golpeando el balón con el cordón de la bota. Se busca que el balón salga muy rápido y con poca rotación.</li>
+                    <li><b>Empeine Interior/Exterior (Efecto):</b>Se usa para darle curva (efecto) al balón, permitiendo que el disparo esquive la mano del portero o rodee a un defensor.</li>
+                    <li><b>Punta (Puntera):</b>Utilizado en situaciones de alta presión o en espacios muy reducidos, donde no hay tiempo para armar un golpeo con el empeine. Es rápido y difícil de leer para el portero.</li>
+                </ul>
+                </li>
+                <li><b>Proceso de Ejecución:</b>
+                <ul>
+                    <li><b>Carrera de Aproximación:</b>Debe ser natural, pero ajustada para que el pie de apoyo se coloque junto al balón.</li>
+                    <li><b>Pie de Apoyo:</b>Debe estar ligeramente orientado hacia donde se quiere dirigir el balón, colocado a unos centímetros del esférico.</li>
+                    <li><b>Contacto Visual:</b>Mantener la vista en el balón hasta el momento del impacto.</li>
+                    <li><b>Seguimiento del Golpeo (Follow Through):</b>La pierna que golpea debe seguir el movimiento natural y terminar apuntando hacia el objetivo, garantizando la trayectoria y la potencia.</li>
+                </ul>
+                </li>
+                <li><b>Toma de Decisión:</b>La clave está en la velocidad de ejecución. El jugador debe identificar rápidamente el espacio libre (ej. el palo más lejano, por debajo del portero) y disparar antes de que el defensor pueda bloquear o el portero pueda reaccionar.</li>
+            </ul>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/K8g-LZStmKw?si=CgNeyQhx9Q0Ur-Ak" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div id="cont4" class="contenido_detalle">
+            <h1>Control Orientado</h1>
+            <p>El Control Orientado es una técnica de recepción avanzada donde el jugador, al mismo tiempo que controla el balón, lo dirige de inmediato al espacio, superando a un rival o preparándolo para la siguiente acción de ataque (pase, tiro o conducción), sin necesidad de un segundo toque para acomodarlo.</p>
+            <h4>Descripcion Detallada</h4>
+            <p>Esta técnica es una de las habilidades más distintivas de los jugadores de élite y es fundamental en el juego de posición.</p>
+            <ul>
+                <li><b>Principio de Ahorro de Tiempo:</b>El control orientado elimina un toque innecesario, ahorrando una fracción de segundo. En el fútbol de alta competición, esta fracción es la diferencia entre ser presionado o tener el tiempo suficiente para tomar la decisión correcta.</li>
+                <li><b>La Intención Previa:</b>El control orientado requiere que el jugador tenga una imagen mental de la siguiente jugada antes de que el balón llegue. Debe saber dónde están los rivales, dónde está el espacio libre y dónde está su compañero.</li>
+                <li><b>Ejecución Técnica:</b>
+                <ul>
+                    <li><b>Superficie 'Blanda':</b>Usar una parte del pie o cuerpo de manera "relajada" (ej. el borde exterior o interior) para que el balón rebote suavemente en la dirección deseada. No se amortigua, se desvía.</li>
+                    <li><b>Uso del Perfil:</b>El jugador utiliza su cuerpo y su perfilación para "proteger" el balón del rival que viene de una dirección y al mismo tiempo dirigirlo lejos de él.</li>
+                    <li><b>Movimiento de Cadera:</b>Una ligera rotación de cadera en el momento del contacto ayuda a "acomodar" el balón en el carril de movimiento deseado.</li>
+                </ul>
+                </li>
+            </ul>
+            <p>Un control orientado exitoso no solo mantiene la fluidez del ataque, sino que a menudo sirve como un mini-regate, superando la marca del jugador que venía a presionar la recepción.</p>
+        </div>
+
+        <div id="cont5" class="contenido_detalle">
+            <h1>Recepción Bajo Presión</h1>
+            <p>La Recepción Bajo Presión se refiere a la capacidad técnica y mental de un jugador para recibir y mantener el control del balón cuando un oponente está cerca, activo y buscando la intercepción o el robo.</p>
+            <h4>Descripcion Detallada</h4>
+            <p>Esta habilidad es un híbrido de técnica (Control) y táctica/mentalidad (Visión y Protección). Es crucial para los centrocampistas y defensas que construyen el juego.</p>
+            <ul>
+                <li><b>Escaneo del Entorno (Scanning):</b>ntes de recibir el balón, el jugador debe levantar la cabeza y escanear rápidamente (un vistazo sobre el hombro) para saber dónde está el rival más cercano y cuáles son las opciones de pase más seguras. Sin esta información, el jugador recibirá "a ciegas" y será vulnerable.</li>
+                <li><b>Protección del Balón (Escudo Corporal):</b>El jugador debe usar su cuerpo como una barrera. Al recibir, debe interponer su cuerpo entre el balón y el defensor, usando el brazo y la cadera para mantener la distancia y resistir el contacto.</li>
+                <li><b>La Toma de Decisión Rápida:</b>
+                <ul>
+                    <li><b>Pase al Primer Toque:</b>Si el rival está muy cerca y no hay tiempo para girar, la solución más segura es soltar el balón al compañero mejor posicionado (pase de seguridad o "de vuelta").</li>
+                    <li><b>Control Orientado a Espacio Abierto:</b>Si el jugador escanea y ve un espacio libre en la dirección opuesta a la presión del rival, realiza un control orientado para escapar.</li>
+                </ul>
+                </li>
+                <li><b>La "Falsa Recepción":</b>En ocasiones, el jugador simula que va a controlar con una superficie (ej. interior) para atraer al rival, y luego lo toca suavemente con otra superficie (ej. exterior) para esquivarlo o hacer un pase de ruptura.</li>
+            </ul>
+            <p>La confianza en la Recepción Bajo Presión permite a un equipo mantener la calma y la posesión incluso en zonas comprometidas del campo.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/XNkwf8i-rjQ?si=GrnXZa4huy1QrbgE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div id="cont6" class="contenido_detalle">
+            <h1>Perfil Corporal</h1>
+            <p>El Perfil Corporal (o Perfilación) es la posición y orientación del cuerpo del jugador con respecto al balón, a los compañeros, a los rivales y a la portería, en el momento de la recepción o el pase. No es un movimiento, sino una postura previa que facilita la ejecución de la técnica posterior.</p>
+            <h4>Descripcion Detallada:</h4>
+            <p>Este concepto es puramente técnico-táctico. La correcta perfilación es el pre-requisito para ejecutar un control orientado o un pase efectivo.</p>
+            <ul>
+                <li><b>Orientación hacia Adelante:</b>El perfil ideal es aquel que permite al jugador recibir el balón y tener la vista (o al menos la visión periférica) orientada hacia el campo contrario, evitando tener que recibir de espaldas al ataque.
+                <ul>
+                    <li>Un jugador bien perfilado puede recibir con el pie más alejado del defensor y tener dos opciones inmediatas: jugar hacia adelante o jugar en el sentido de donde vino el pase.</li>
+                </ul>
+                </li>
+                <li><b>Ángulo Abierto:</b>El jugador debe colocarse en un ángulo tal que no solo reciba el pase de forma segura, sino que también "abra el campo" y tenga el mayor campo de visión posible. Evitar estar totalmente de frente o totalmente de espaldas al origen del pase. La posición lateral (de medio lado) es la más eficaz.</li>
+                <li><b>Facilitando el Control Orientado:</b>La correcta perfilación es lo que permite que el Control Orientado sea exitoso. Si un jugador recibe el balón con una buena perfilación, el primer toque naturalmente lo dirigirá hacia la zona donde ya tiene espacio y visión.</li>
+                <li><b>Toma de Decisión:</b>La perfilación correcta acelera la toma de decisión, ya que el jugador no pierde tiempo girando o acomodándose, sino que ya está listo para soltar el balón al toque o conducir. Si el jugador está mal perfilado, casi siempre se verá obligado a dar un pase de seguridad hacia atrás o lateral.</li>
+            </ul>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/FG4FindiFjc?si=5QmIoyazRu_3aCb0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    <script src="FuncionalidadMka.js"></script>
 </body>
 </html>
