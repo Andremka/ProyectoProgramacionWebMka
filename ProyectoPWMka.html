@@ -6,29 +6,10 @@ Apellidos: Mamani Kantuta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="EstiloMka.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>MkaFootball Academy</title>
     </head>
 <body>
- 
-    <header class="barra_superior">
-        <div class="titulo_pag">
-            <div class="btn_hamburguesa">&#9776;</div>
-            <div class="opacidad_menu_lateral"></div>
-            <h1 class="tit_principal">MkaFootball Academy</h1>
-            <h2 class="tit_secundario">El Futbol es mi Pasion</h2>
-        </div>
-        <div class="logo">
-            <img src="Img/IconMkaFootball.png" id="LogoMka" alt="Logo Pagina">
-        </div>
-        <div class="informacion_usuario">
-            <div class="saludo">
-                <p id="saludo_usuario">Hola, Andres</p>
-                <p id="correo_usuario">andresmamanikantuta@gmail.com</p>
-            </div>
-            <a href="#" class="btn-salir">Salir</a>
-        </div>
-    </header>
-
     <aside class="menu_lateral">
         <div class="contenido_lateral">
             <img src="Img/IconMkaFootball.png" class="LogoMka" alt="Logo">
@@ -37,83 +18,109 @@ Apellidos: Mamani Kantuta -->
 
         <nav class="contenido_menu">
             <ul>
-                <li><a href="ProyectoPWMka.html" class="opc_menu">Inicio</a></li>
-                <li><a href="ContenidoTactica.html" class="opc_menu">Táctica</a></li>
-                <li><a href="ContenidoTecnica.html" class="opc_menu">Técnica</a></li>
-                <li><a href="#" class="opc_menu">Logros</a></li>
-                <li><a href="#" class="opc_menu">Progreso</a></li>
-                <li><a href="#" class="opc_menu">Artículos</a></li>
+                <li><a href="ProyectoPWMka.html" class="opc_menu activo"><i class="fas fa-home"></i><span>Inicio</span></a></li>
+                <li><a href="ContenidoTactica.html" class="opc_menu"><i class="fas fa-chess-board"></i><span>Táctica</span></a></li>
+                <li><a href="ContenidoTecnica.html" class="opc_menu"><i class="fas fa-running"></i><span>Técnica</span></a></li>
+                <li><a href="#" class="opc_menu"><i class="fas fa-medal"></i><span>Logros</span></a></li>
+                <li><a href="#" class="opc_menu"><i class="fas fa-chart-line"></i><span>Progreso</span></a></li>
+                <li><a href="#" class="opc_menu"><i class="fas fa-newspaper"></i><span>Artículos</span></a></li>
             </ul>
         </nav>
-
-        <a href="#" class="btn_cerrar_sesion">Salir</a>
+        <button class="btn_despliegue_lat"><i class="fas fa-chevron-left"></i></button>
     </aside>
 
+    <header class="barra_superior">
+        <div class="btn_hamburguesa"><i class="fas fa-bars"></i></div>
+        <div class="contenido_der">
+            <div class="cont_busqueda">
+            <input type="search" placeholder="Buscar..." class="busqueda">
+            <i class="icono_busqueda fas fa-search"></i>
+        </div>
+        <span class="icono_notificaciones"><i class="fas fa-bell"></i></span>
+        <div class="informacion_usuario">
+            <span id="saludo_usuario">Hola, Usuario</span>
+            <div class="icn_usuario"></div>
+        </div>
+        </div>
+    </header>   
 
     <main class="interfaz_principal">
-        <h3 id="txt_aprendizaje">Elige tu Área de Aprendizaje</h3>
-        <p id="txt_descripcion">Descubre contenido de alta calidad diseñado para mejorar tu juego.</p>
-        <p id="txt_descripcion">Desde tacticas avanzadas hasta tecnicas fundamentales, todo lo que necesites esta aqui.</p>
-        <nav id="lst_opciones_adicionales">
-            <article id="opc_articulos">
-                <img src="Img/ImgArticulos.png" alt="icn_articulo" id="icn_opc_adicionales">
-                <h4>Articulos</h4>
-                <p>Contenido Exclusivo</p>
-            </article>
-            <article id="opc_progreso">
-                <img src="Img/ImgProgreso.png" alt="icn_progreso" id="icn_opc_adicionales">
-                <h4>Progreso</h4>
-                <p>Seguimiento Detallado</p>
-            </article>
-            <article id="opc_logros">
-                <img src="Img/ImgLogros.png" alt="icn_logros" id="icn_opc_adicionales">
-                <h4>Logros</h4>
-                <p>Desbloquea Premios</p>
-            </article>
-        </nav>
- 
-        <section class="opc_principales">
-
-            <article class="opc_tactica">
-                <div class="fondo_opc">
-                    <img src="Img/FondoTactica.jpg" alt="Fondo Tactica" id="img_fondo">
+        <div class="desp_contenido">
+            <section class="contenido_central">
+                    <div class="titulo_pag">
+                    <h1 class="tit_principal">MkaFootball Academy</h1>
+                    <h2 class="tit_secundario">El Futbol es mi Pasion</h2>
                 </div>
-                <h3>Tactica</h3>
-                <p class="subtitulo">Domina el juego estrategico</p>
-                <p id="desc_cont">Explora formaciones, sistemas de juego y estrategias utilizadas por los mejores equipos del mundo</p>
-                <ul class="contenido_tactica">
-                    <li>Formaciones 4-3-3, 4-4-2, 3-4-3 y mas...</li>
-                    <li>Estrategias defensivas y presion media - alta</li>
-                    <li>Progresiones desde zona 1 y zona 2</li>
-                </ul>
-                <a href="ContenidoTactica.html">6 Contenidos disponibles...</a>
-            </article>
-
-            <article class="opc_tecnica">
-                <div class="fondo_opc">
-                    <img src="Img/FondoTecnica 2.jpg" alt="Fondo Tecnica" id="img_fondo">
+                <div class="descripcion_principal">
+                    <h3 id="txt_aprendizaje">Elige tu Área de Aprendizaje</h3>
+                    <p id="txt_descripcion">Descubre contenido de alta calidad diseñado para mejorar tu juego.</p>
+                    <p id="txt_descripcion">Desde tacticas avanzadas hasta tecnicas fundamentales, todo lo que necesites esta aqui.</p>
                 </div>
-                <h3>Tecnica</h3>
-                <p class="subtitulo">Perfecciona tus habilidades</p>
-                <p id="desc_cont">Mejora tus habilidades individuales con ejercicios y tecnicas utilizadas por profesionales</p>
-                <ul class="contenido_tecnica">
-                    <li>Pase y control de balon</li>
-                    <li>Desplazamientos y regates</li>
-                    <li>Tiro a porteria</li>
-                </ul>
-                <a href="ContenidoTecnica.html">6 Contenidos disponibles...</a>
-            </article>
+                
+                <section class="opc_principales">
+
+                    <article class="opc_tactica">
+                        <div class="fondo_opc">
+                            <img src="Img/FondoTactica.jpg" alt="Fondo Tactica" id="img_fondo">
+                        </div>
+                        <h3>Tactica</h3>
+                        <p class="subtitulo">Domina el juego estrategico</p>
+                        <p id="desc_cont">Explora formaciones, sistemas de juego y estrategias utilizadas por los mejores equipos del mundo</p>
+                        <ul class="contenido_tactica">
+                            <li>Formaciones 4-3-3, 4-4-2, 3-4-3 y mas...</li>
+                            <li>Estrategias defensivas y presion media - alta</li>
+                            <li>Progresiones desde zona 1 y zona 2</li>
+                        </ul>
+                        <a href="ContenidoTactica.html">6 Contenidos disponibles...</a>
+                    </article>
+
+                    <article class="opc_tecnica">
+                        <div class="fondo_opc">
+                            <img src="Img/FondoTecnica 2.jpg" alt="Fondo Tecnica" id="img_fondo">
+                        </div>
+                        <h3>Tecnica</h3>
+                        <p class="subtitulo">Perfecciona tus habilidades</p>
+                        <p id="desc_cont">Mejora tus habilidades individuales con ejercicios y tecnicas utilizadas por profesionales</p>
+                        <ul class="contenido_tecnica">
+                            <li>Pase y control de balon</li>
+                            <li>Desplazamientos y regates</li>
+                            <li>Tiro a porteria</li>
+                        </ul>
+                        <a href="ContenidoTecnica.html">6 Contenidos disponibles...</a>
+                    </article>
+                </section>
+            </section>
+
+            <aside class="interfaz_opc_ad">
+                <nav id="lst_opciones_adicionales">
+                    <article id="opc_articulos">
+                        <img src="Img/ImgArticulos.png" alt="icn_articulo" id="icn_opc_adicionales">
+                        <h4>Articulos</h4>
+                        <p>Contenido Exclusivo</p>
+                    </article>
+                    <article id="opc_progreso">
+                        <img src="Img/ImgProgreso.png" alt="icn_progreso" id="icn_opc_adicionales">
+                        <h4>Progreso</h4>
+                        <p>Seguimiento Detallado</p>
+                    </article>
+                    <article id="opc_logros">
+                        <img src="Img/ImgLogros.png" alt="icn_logros" id="icn_opc_adicionales">
+                        <h4>Logros</h4>
+                        <p>Desbloquea Premios</p>
+                    </article>
+                </nav>
+            </aside>
+        </div>
+
+        <section class="opc_rapida">
+            <h4>Listo para mejorar tu juego?</h4>
+            <p>Accede a contenido de primera, videos de entrenamientos y guias detalladas para que te conviertas en un mejor jugador</p>
+            <div id="acceso_rapido">
+                <a href="ContenidoTactica.html" class="link_tactica">Explorar Tactica</a>
+                <a href="ContenidoTecnica.html" class="link_tecnica">Explorar Tecnica</a>
+            </div>
         </section>
     </main>
- 
-    <section class="opc_rapida">
-        <h4>Listo para mejorar tu juego?</h4>
-        <p>Accede a contenido de primera, videos de entrenamientos y guias detalladas para que te conviertas en un mejor jugador</p>
-        <div id="acceso_rapido">
-            <a href="ContenidoTactica.html" class="link_tactica">Explorar Tactica</a>
-            <a href="ContenidoTecnica.html" class="link_tecnica">Explorar Tecnica</a>
-        </div>
-    </section>
  
     <footer id="pie_pagina">
         <div id="contenido_pie_pagina">
