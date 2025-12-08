@@ -1,0 +1,283 @@
+/* Estilos Generales*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+body{
+    background: #aeddfe;
+    color: #0088D9;
+}
+/*  ESTILOS PARA CONTENIDOS TÁCTICA Y TÉCNICA   */
+/* Interfaz principal */
+.interfaz_tactica,
+.interfaz_tecnica {
+    padding: 15px;
+}
+/*   BARRA SUPERIOR */
+.barra_superior_tactica,
+.barra_superior_tecnica {
+    text-align: left;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    border-bottom: 2px solid #e0e0e0;
+    margin-bottom: 25px;
+}
+.barra_superior_tactica h2,
+.barra_superior_tecnica h2 {
+    font-size: 2em;
+    margin-top: 10px;
+}
+.barra_superior_tactica h3,
+.barra_superior_tecnica h3 {
+    font-size: 1.2em;
+    color: #005fa3;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.barra_superior_tactica p,
+.barra_superior_tecnica p {
+    margin-top: 8px;
+    font-size: 1em;
+    opacity: 0.8;
+}
+#cabecera_tactica, #cab_tecnica{
+    color: #033684;
+    font-size: larger;
+    background-color: white;
+}
+/*   BOTÓN VOLVER  */
+.barra_superior_tactica a,
+.barra_superior_tecnica a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    background: #0072ff;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1em;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+.barra_superior_tactica a:hover,
+.barra_superior_tecnica a:hover {
+    background: #0053b3;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.30);
+}
+/*  CONTENIDO LATERAL */
+.pantalla_contenidos {
+    display: flex;
+    gap: 30px;
+}
+/* LISTA IZQUIERDA */
+.lst_contenidos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 280px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    height: max-content;
+}
+.lst_contenidos h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* TARJETAS LATERALES */
+.tarjeta_contenido {
+    height: 110px;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+    transition: transform 0.25s ease, background 0.25s ease;
+    filter: contrast(1.1) saturate(1.2);
+}
+.tarjeta_contenido span {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.8);
+}
+.tarjeta_contenido:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(5px);
+}
+.tarjeta_contenido img {
+    width: 55px;
+    height: 55px;
+    border-radius: 10px;
+}
+.tarjeta_contenido::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.2); 
+    z-index: 0;
+}
+/* CONTENIDO DERECHO */
+.contenido_mostrado {
+    flex: 1;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.contenido_mostrado p,h4,ul,li,ol,b{
+    margin-left: 20px;
+    margin-right: 25px;
+    color: #033684;
+    font-family: "Segoe UI", sans-serif;
+    font-size:x-large;
+    font-display: block;
+    letter-spacing: 0.5px;   
+    line-height: 1.5;        
+}
+.contenido_mostrado h1{
+    margin-left: 20px;
+    margin-right: 25px;
+    color: #033684;
+    font-family: "Segoe UI", sans-serif;
+    font-size:40px;
+    letter-spacing: 0.5px;   
+    line-height: 1.5;  
+}
+/* Cada contenido se oculta por defecto */
+.contenido_detalle {
+    display: none;
+}
+/* El contenido activo sí se muestra */
+.contenido_detalle.activo {
+    display: block;
+}
+/* Imagenes */
+.img_contenido {
+    width: 50%;
+    max-width: 850px;
+    border-radius: 16px;
+    display: block;
+    margin: 18px auto;
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Video */
+iframe {
+    width: 100%;
+    height: 330px;
+    border-radius: 12px;
+    margin-top: 15px;
+}
+.contenido_detalle iframe {
+    width: 100%;
+    max-width: 900px;
+    height: 420px;
+    border-radius: 12px;
+    display: block;
+    margin: 22px auto;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.contenido_detalle iframe:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.35);
+}
+/* DISEÑO RESPONSIVO */
+/*  TABLETS  */
+@media (max-width: 1024px) {
+    .pantalla_contenidos {
+        gap: 20px;
+    }
+
+    .lst_contenidos {
+        width: 230px;
+    }
+
+    .contenido_mostrado {
+        padding: 20px;
+    }
+
+    .contenido_mostrado h1 {
+        font-size: 2.2rem;
+    }
+}
+
+/*  MÓVILES  */
+@media (max-width: 768px) {
+
+    .pantalla_contenidos {
+        flex-direction: column;
+    }
+
+    .lst_contenidos {
+        width: 100%;
+    }
+
+    .tarjeta_contenido {
+        height: 90px;
+    }
+
+    .contenido_mostrado {
+        width: 100%;
+    }
+
+    .contenido_mostrado h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .contenido_mostrado p,
+    .contenido_mostrado li {
+        font-size: 1.1rem;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .contenido_detalle iframe {
+        height: 250px;
+    }
+
+    .barra_superior_tecnica,
+    .barra_superior_tactica {
+        text-align: center;
+        align-items: center;
+    }
+}
+/*  MÓVILES PEQUEÑOS  */
+@media (max-width: 480px) {
+
+    .tarjeta_contenido {
+        height: 80px;
+    }
+
+    .tarjeta_contenido span {
+        font-size: 1em;
+    }
+
+    .contenido_mostrado h1 {
+        font-size: 1.6rem;
+    }
+
+    .contenido_mostrado p,
+    .contenido_mostrado li {
+        font-size: 1rem;
+    }
+
+    .contenido_detalle iframe {
+        height: 200px;
+    }
+}
