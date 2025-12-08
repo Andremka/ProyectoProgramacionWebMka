@@ -1,4 +1,4 @@
-/*Estilos generales*/
+/*  Estilos generales  */
 *{
     margin: 0;
     padding: 0;
@@ -13,99 +13,291 @@ body{
     height: 80px;
     width: 80px;
 }
-@media (max-width: 1024px) {
-    #LogoMka {
-        height: 80px;
-        width: 80px;
-    }
-}
-/*Barra Superior*/
+/* --- Barra Superior --- */
 .barra_superior{
+    position: sticky;
+    top: 0;
+    margin-left: 300px;
+    width: calc(100% - 300px);
+    z-index: 999;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     padding: 15px 40px;
     background: white;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);;
+}
+.interfaz_principal{
+    margin-left: 300px;
+    padding: 20px 40px;
+    min-height: calc(100vh - 70px);
+}
+.desp_contenido{
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    width: 100%;
+}
+.contenido_central{
+    flex: 3;
+    max-width: 70%;
+    min-width: 60%;
+}
+.interfaz_opc_ad{
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px;
 }
 .titulo_pag{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-right: 30px;
+    margin-bottom: 25px;
 }
 .tit_principal{
-    font-size: 2em;
-    color: black;
+    font-size: 2.7em;    color: #033684;
 }
 .tit_secundario{
-    font-size: 1.2em;
-    color: aqua;
+    font-size: 1.6em;    color: #005fa3;
 }
 #saludo_usuario{
-    color: black;
-}
-#correo_usuario{
     color: #0088D9;
 }
 .informacion_usuario{
     display: flex;
     align-items: center;
-    gap: 15px;
 }
-.btn-salir{
-    background: #005B99;
-    padding: 8px 14px;
-    color: white;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: 0.2s;
-}
-.btn-salir:hover{
-    background: #003F6B;
-}
-/*Interfaz Pincipal (Main)*/
-
-/*Opciones Adicionales*/
-#lst_opciones_adicionales{
-    padding: 30px 0;
+.contenido_der{
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 65px;
-    width: 100%;
-    margin-top: 35px;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
 }
-#lst_opciones_adicionales article{
+.cont_busqueda{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.cont_busqueda .busqueda{
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
     width: 250px;
-    background-color: white;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    overflow: hidden;
-    border: 1px solid #eee;
 }
-#lst_opciones_adicionales article,
-.opc_tactica,
-.opc_tecnica {
+.cont_busqueda .icono_busqueda {
+    position: absolute;
+    right: 15px;
+    color: #888;
+    pointer-events: none; /* Asegura que no interfiera con el input */
+}
+.icono_notificaciones {
+    color: #ff811a;
+    font-size: 20px;
+    border: 1px solid #ff811a; 
+    border-radius: 50%;
+    padding: 8px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; 
+    height: 40px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.icn_usuario {
+    width: 38px;
+    height: 38px;
+    background-color: #d8d8d8;
+    border-radius: 50%;
+    margin-left: 10px;
+    cursor: pointer;
+}
+/* --- Menu Lateral ---*/
+.menu_lateral {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    z-index: 1000;
+    background: #00A6FF; 
+    color: white;
+    padding: 20px 0;
+    transform: translateX(0);
+    opacity: 1;
+    transition: width 0.35s ease, transform 0.35s ease;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centrar contenido dentro del card */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 }
-@media (max-width: 768px) {
-    .opc_principales {
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
-    }
-
-    #lst_opciones_adicionales {
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
-    }
+.contenido_lateral {
+    display: flex;
+    align-items: center;
+    padding: 0 20px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.LogoMka {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+.contenido_lateral h2 {
+    font-size: 1.3em;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+.contenido_menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.contenido_menu li {
+    margin: 5px 0;
+}
+.opc_menu {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+.opc_menu i{
+    width: 20px;
+    margin-right: 15px;
+    text-align: center;
+}
+.opc_menu.activo { 
+    background-color: #ffffff;
+    color: #00A6FF;
+    border-radius: 8px;
+    margin: 0 10px;
+}
+.btn_despliegue_lat {
+    margin-top: auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    background-color: #033684;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.btn_despliegue_lat:hover {
+    background-color: #004d99;
+}
+.btn_despliegue_lat i {
+    transition: transform 0.3s ease; 
+}
+.btn_cerrar_sesion {
+    margin-top: auto; 
+    display: block;
+    text-align: center;
+    padding: 15px;
+    background-color: #033684;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+/*  --- Estilos del Botón de Hamburguesa --- */
+.btn_hamburguesa {
+    background-color: transparent;
+    color: #00A6FF;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1100;
+    padding: 5px 10px;
+    transition: opacity 0.3s ease;
+}
+.btn_hamburguesa.oculto {
+    opacity: 0;
+    pointer-events: none; /* deshabilita clic mientras está oculto */
+}
+.btn_hamburguesa {
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.menu_lateral.colapsado{
+    width: 80px;
+}
+.menu_lateral.colapsado ~ .barra_superior,
+.menu_lateral.colapsado ~ .interfaz_principal,
+.menu_lateral.colapsado ~ #pie_pagina {
+    margin-left: 80px !important;
+    width: calc(100% - 80px) !important;
+}
+.menu_lateral.colapsado .contenido_lateral h2,
+.menu_lateral.colapsado .contenido_menu span { 
+    opacity: 0;
+    width: 0;
+    min-width: 0;
+    margin: 0;
+    overflow: hidden;
+    transition: opacity 0.1s ease;
+}
+.menu_lateral.colapsado .contenido_lateral {
+    justify-content: center; 
+    padding: 20px 0; 
+}
+.menu_lateral.colapsado .LogoMka {
+    margin-right: 0; 
+    margin-left: 0; 
+}
+/* Rotacion del btn de Colapso */
+.menu_lateral.colapsado .btn_despliegue_lat i {
+    transform: rotate(180deg);
+}
+.menu_lateral.colapsado .opc_menu {
+    padding: 12px 0;
+    justify-content: center; 
+}
+.menu_lateral.colapsado .opc_menu i {
+    margin-right: 0; /* Elimina el margen del icono */
+}
+.menu_lateral .opc_menu:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(5px);
+    transition: all 0.25s ease;
+}
+.menu_lateral.activo {
+    transform: translateX(0) !important; 
+    opacity: 1 !important;
+    transition: transform 0.35s ease, opacity 0.35s ease
+}
+/* * * * * *  Interfaz Pincipal (Main) * * * * * */
+/* --- Opciones Adicionales ----*/
+#lst_opciones_adicionales{
+    padding: 0; 
+    display: flex;
+    flex-direction: column; /* Apilarlas verticalmente */
+    gap: 25px;
+    width: 100%;
+    margin-top: 0;
+}
+#lst_opciones_adicionales article{
+    background-color: white;
+    width: 100%; 
+    text-align: left; 
+    padding: 20px;
+    border-left: 5px solid #00A6FF;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: none;
+    cursor: pointer;
+}
+#lst_opciones_adicionales article:hover {
+    transform: scale(1.05); /* Se agranda un 5% */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 #icn_opc_adicionales{
     width: 60px;
@@ -136,40 +328,25 @@ body{
     margin-bottom: 5px;
     text-align: center;
 }
-/* Animación para las tarjetas de opciones adicionales */
-#lst_opciones_adicionales article {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#lst_opciones_adicionales article:hover {
-    transform: translateY(-8px) scale(1.05);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    cursor: pointer;
-}
-
 /* Animación para las tarjetas de contenidos */
 .tarjeta_contenido {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .tarjeta_contenido:hover {
     transform: translateY(-5px) scale(1.03);
     box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
-/*Opciones Principales (Tecnica - Tactica)*/
+/* ----- Opciones Principales (Tecnica - Tactica) -----*/
 .opc_principales{
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 35px;
-    max-width: 1175px;
-    margin: 40px auto; /* Centra el contenedor horizontalmente */
-    padding: 0 20px; /* Añade un pequeño padding para evitar que toque los bordes en pantallas muy pequeñas */
-    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: 40px 0;
+    padding: 0;
 }
 .fondo_opc{
     width: 100%;
-    height: auto; /* Ajusta automáticamente según el contenido */
+    height: auto; 
     position: relative;
     padding: 0;
     display: flex;
@@ -177,8 +354,8 @@ body{
     justify-content: flex-end;
 }
 #img_fondo{
-    width: 100%; /* Ocupa todo el ancho del contenedor */
-    height: auto; /* Mantiene proporción */
+    width: 100%; /* Ocupa todo el ancho del div */
+    height: auto; 
     border-radius: 25px;
     display: block;
     margin-bottom: 15px;
@@ -193,7 +370,7 @@ body{
     background-color: white;
     border-radius: 25px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    width: 45%;
+    width: 48.5%;
     max-width: 570px;
     display: flex;
     flex-direction: column;
@@ -207,8 +384,8 @@ body{
 }
 .opc_principales a{
     display: inline-block;
-    text-align: center;   /* Centrado horizontal */
-    margin: 15px auto 20px auto; /* Centrado dentro del contenedor */
+    text-align: center;   
+    margin: 15px auto 20px auto; 
     padding-bottom: 10px;
     font-weight: 600;
     text-decoration: none;
@@ -228,12 +405,12 @@ body{
 }
 .contenido_tactica, .contenido_tecnica{
     text-align: left;
-    margin: 20px auto 0 auto; /* Centra en pantallas pequeñas */
+    margin: 20px auto 0 auto; 
     padding: 0 20px; /* Espaciado interno */
     list-style-position: inside; /* Para que la viñeta no se corte */
 }
 .contenido_tactica li, .contenido_tecnica li {
-    font-size: 1em; /* Tamaño base, cambia con media queries */
+    font-size: 1em; /* Tamaño base */
     line-height: 1.5;
     margin-bottom: 8px;
 }
@@ -244,34 +421,14 @@ body{
     padding-bottom: 15px;
     padding-top: 15px;
 }
-@media (max-width: 768px) {
-    .opc_principales {
-        flex-direction: column;
-        gap: 25px;
-        align-items: center;
-    }
-
-    .opc_tactica, .opc_tecnica {
-        width: 90%;
-    }
-
-    #desc_cont {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-    .contenido_tactica li, .contenido_tecnica li {
-        font-size: 0.95em;
-        margin-bottom: 6px;
-    }
-}
-/*Acceso Rapido a Tecnica - Tactica*/
+/* ---- Acceso Rapido a Tecnica - Tactica ---- */
 .opc_rapida {
     max-width: 1175px;
     margin: 40px auto;
     padding: 30px;
-    background: linear-gradient(135deg, #00bfff, #004d99); /* Degradado original */
+    background: linear-gradient(135deg, #00bfff, #004d99); 
     border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,77,153,0.4); /* Sombra original */
+    box-shadow: 0 10px 20px rgba(0,77,153,0.4);
     text-align: center;
     color: white;
     position: relative;
@@ -281,7 +438,6 @@ body{
     background-size: 400% 400%;
     animation: gradientMovimiento 10s ease infinite;
 }
-
 .opc_rapida h4 {
     font-size: 1.8em;
     margin-bottom: 10px;
@@ -316,37 +472,15 @@ body{
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
-@media (max-width: 768px) {
-    .opc_rapida {
-        padding: 20px;
-        margin: 25px 15px;
-    }
-
-    .opc_rapida h4 {
-        font-size: 1.5em;
-    }
-
-    .opc_rapida p {
-        font-size: 1em;
-        line-height: 1.4;
-    }
-
-    #acceso_rapido {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    #acceso_rapido a {
-        width: 100%;
-        text-align: center;
-    }
-}
-/*Pie de Pagina*/
+/* --- Pie de Pagina ---*/
 #pie_pagina {
     background: #003366; /* Color más profundo */
     color: white;
     padding-top: 50px;
     font-family: Arial, sans-serif;
+    margin-left: 300px;
+    width: calc(100% - 300px);
+    transition: margin-left 0.35s ease, width 0.35s ease;
 }
 #contenido_pie_pagina {
     max-width: 1200px;
@@ -377,15 +511,6 @@ body{
     font-weight: bold;
     color: white;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    padding-bottom: 5px;
-}
-#pie_pagina h3, #pie_pagina h4 {
-    color: white;
-    font-weight: bold;
-}
-
-#pie_pagina h4 {
-    border-bottom: 1px solid rgba(255,255,255,0.3);
     padding-bottom: 5px;
 }
 .info_principal p, .redes_sociales p, .dir_contacto p {
@@ -465,468 +590,13 @@ body{
     font-size: 14px;
     opacity: 0.7;
 }
-@media (max-width: 768px) {
-    #contenido_pie_pagina {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .icn_redes_sociales a {
-        margin: 5px;
-    }
-
-    .suscripcion_noticias input {
-        width: 100%;
-        margin-bottom: 10px;
-        border-radius: 5px;
-    }
-
-    .suscripcion_noticias button {
-        width: 100%;
-        border-radius: 5px;
-    }
-}
-/*Interfaz Tecnica y Tactica*/
-.interfaz_tecnica, .interfaz_tactica{
-    padding: 20px;
-}
-.barra_superior_tecnica, .barra_superior_tactica{
-    background: #0088D9;
-    padding: 20px;
-    border-radius: 10px;
-    color: white;
-    margin-bottom: 25px;
-}
-.contenido_tecnica, .contenido_tactica{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-.seccion_tec, .seccion_tac{
-    background: white;
-    border-radius: 14px;
-    padding: 15px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-.seccion_tec img, .seccion_tac img{
-    width: 100%;
-    border-radius: 10px;
-}
-.btn_ver{
-    margin-top: 8px;
-    display: inline-block;
-    background: #00A6FF;
-    padding: 8px 15px;
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: 0.2s;
-}
-.btn_ver:hover{
-    background: #0088D9;
-}
-/* ----- Barra superior ----- */
-.barra_superior_tecnica {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-.barra_superior_tecnica h2 {
-    margin-top: 10px;
-}
-.barra_superior_tecnica h3 {
-    color: #005b99;
-    margin-bottom: 5px;
-}
-#cabecera_tactica, #cab_tecnica{
-    color: #033684;
-    font-size: larger;
-    background-color: white;
-}
-#cab_tecnica a{
-    display: inline-block;
-    text-decoration: none;
-    color: #fff; /* color del texto */
-    background-color: #0077cc; /* color de fondo */
-    padding: 10px 20px; /* espacio interno */
-    border-radius: 8px; /* bordes redondeados */
-    font-weight: bold;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* sombra */
-}
-#cabecera_tactica a{
-    display: inline-block;
-    text-decoration: none;
-    color: #fff; /* color del texto */
-    background-color: #0077cc; /* color de fondo */
-    padding: 10px 20px; /* espacio interno */
-    border-radius: 8px; /* bordes redondeados */
-    font-weight: bold;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* sombra */
-}
-#cabecera_tactica a:hover{
-    background-color: #005fa3; /* color más oscuro al pasar el mouse */
-    transform: translateY(-2px); /* pequeño levantamiento */
-    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-}
-#cab_tecnica a:hover{
-    background-color: #005fa3; /* color más oscuro al pasar el mouse */
-    transform: translateY(-2px); /* pequeño levantamiento */
-    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-}
-/* pantalla de contenidos */
-.pantalla_contenidos {
-    display: flex;
-    gap: 25px;
-}
-
-/* lista de izquierda (panel de contenidos) */
-.lst_contenidos {
-    width: 280px;
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    height: max-content;
-}
-.lst_contenidos h2 {
-    margin-bottom: 15px;
-    text-align: center;
-}
-.tarjeta_contenido {
-    position: relative;
-    height: 100px; 
-    border-radius: 12px;
-    overflow: hidden;
-    cursor: pointer;
-    display: flex;
-    align-items: flex-end;
-    padding: 10px;
-    color: white;
-    font-weight: bold;
-    font-size: 1.1rem;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: transform 0.3s, box-shadow 0.3s;
-    filter: contrast(1.1) saturate(1.2); 
-}
-.tarjeta_contenido::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.2); /* transparente, legibilidad */
-    z-index: 0;
-}
-.tarjeta_contenido span {
-    position: relative;
-    z-index: 1; /* texto encima */ 
-}
-.tarjeta_contenido img {
-    width: 45px;
-    height: 45px;
-}
-.tarjeta_contenido:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-}
-/* contenido para visualizar */
-.contenido_mostrado {
-    flex: 1;
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-.contenido_mostrado p,h4,h1,ul,li,ol,b{
-    margin-left: 20px;
-    margin-right: 25px;
-    color: #111;
-    font-family: "Segoe UI", sans-serif;
-    letter-spacing: 0.5px;   /* Espacio entre letras */
-    line-height: 1.5;        /*  legibilidad */
-}
-.contenido_detalle {
-    display: none;
-}
-.contenido_detalle.activo {
-    display: block;
-}
-
-/* diseño para celulares, tablets */
-@media (max-width: 1024px) {
-    .pantalla_contenidos {
-        flex-direction: column;
-    }
-    .lst_contenidos {
-        width: 100%;
-    }
-}
-
-@media (max-width: 768px) {
-    .barra_superior_tecnica {
-        text-align: center;
-    }
-    .tarjeta_contenido span {
-        font-size: 0.95em;
-    }
-    iframe {
-        width: 100% !important;
-        height: 230px !important;
-    }
-}
-/*  Estilos del Botón de Hamburguesa */
-.btn_hamburguesa {
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    width: 40px;
-    height: 40px;
-    background-color: #00A6FF;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 26px;
-    border-radius: 8px;
-    cursor: pointer;
-    z-index: 1100;
-    transition: opacity 0.3s ease;
-}
-.btn_hamburguesa.oculto {
-    opacity: 0;
-    pointer-events: none; /* deshabilita clic mientras está oculto */
-}
-
-/*  Estilos del Overlay de Opacidad*/
-.opacidad_menu_lateral {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); 
-    opacity: 0; 
-    visibility: hidden; 
-    z-index: 900;
-}
-.opacidad_menu_lateral.activo {
-    opacity: 1;
-    visibility: visible;
-}
-/*Menu Lateral*/
-.menu_lateral {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 300px;
-    height: 100vh;
-    background: #00A6FF; 
-    color: white;
-    padding: 20px 0;
-    transform: translateX(-100%); /* menú oculto por defecto */
-    transition: width 0.3s ease;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-}
-.menu_lateral.activo {
-    transform: translateX(0); /* menú visible al hacer clic */
-}
-
-.menu_lateral.activo {
-    transform: translateX(0); 
-}
-.contenido_lateral {
-    display: flex;
-    align-items: center;
-    padding: 0 20px 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    margin-bottom: 20px;
-}
-.LogoMka {
-    width: 35px;
-    height: 35px;
-    margin-right: 10px;
-    border-radius: 10px;
-}
-.contenido_lateral h2 {
-    font-size: 1.3em;
-    font-weight: bold;
-    margin: 0;
-}
-.contenido_menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-.contenido_menu li {
-    margin: 5px 0;
-}
-.opc_menu {
-    display: block;
-    padding: 12px 20px;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1em;
-}
-.opc_menu.activo { 
-    background-color: #ffffff;
-    color: #00A6FF;
-    border-radius: 8px;
-    margin: 0 10px;
-}
-.btn_cerrar_sesion {
-    margin-top: auto; 
-    display: block;
-    text-align: center;
-    padding: 15px;
-    background-color: #033684;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-}
-/* Animación del menú lateral */
-.menu_lateral {
-    transform: translateX(-270px); /* oculto */
-    opacity: 0;
-    transition: transform 0.35s ease, opacity 0.35s ease;
-}
-.menu_lateral.activo {
-    transform: translateX(0);
-    opacity: 1;
-}
-@media (min-width: 1025px) {
-    .btn_hamburguesa {
-        display: flex; /* siempre visible */
-    }
-}
-/* Overlay */
-.opacidad_menu_lateral {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.35s ease;
-}
-.opacidad_menu_lateral.activo {
-    visibility: visible;
-    opacity: 1;
-}
-.btn_hamburguesa {
-    transition: opacity 0.25s ease, transform 0.25s ease;
-}
-.btn_hamburguesa.oculto {
-    opacity: 0;
-    transform: scale(0.8);
-    pointer-events: none;
-}
-.menu_lateral .opc_menu {
-    opacity: 0;
-    transform: translateX(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-.menu_lateral.activo .opc_menu {
-    opacity: 1;
-    transform: translateX(0);
-}
-.menu_lateral .opc_menu:hover {
-    background: rgba(255, 255, 255, 0.15);
-    transform: translateX(5px);
-    transition: all 0.25s ease;
-}
-
-/* estilo de la lista de contenidos */
-.pantalla_contenidos {
-    display: flex;
-    gap: 25px;
-    margin-top: 25px;
-}
-/* lista de contenidos (izquierda) */
-.lst_contenidos {
-    width: 260px;
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    height: 80vh;
-    overflow-y: auto;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
-.lst_contenidos h2 {
-    margin-bottom: 15px;
-    color: #0088D9;
-}
-.tarjeta_contenido {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 10px;
-    border-radius: 8px;
-    cursor: pointer;
-    background: #f4f7fb;
-    margin-bottom: 12px;
-    transition: 0.2s;
-}
-.tarjeta_contenido:hover {
-    transform: scale(1.05);
-}
-.tarjeta_contenido img {
-    width: 45px;
-    height: 45px;
-    border-radius: 6px;
-}
-
-/* contenido principal de tecnica y tactica*/
-.contenido_mostrado {
-    background: white;
-    flex: 1;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
-
-.contenido_detalle {
-    display: none;
-}
-
-.contenido_detalle.activo {
-    display: block;
-}
-
-.video_contenido {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    margin-top: 15px;
-    border-radius: 12px;
-}
-
-/* Ajustes para pantallas pequeñas */
-@media (max-width: 768px) {
-    .pantalla_contenidos {
-        flex-direction: column;
-    }
-
-    .lst_contenidos {
-        width: 100%;
-        height: auto;
-    }
-
-    .contenido_mostrado {
-        width: 100%;
-        padding: 15px;
-    }
-}
 /*mini ventana de aviso proximamente*/
 .aviso_prox {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
     background-color: rgba(0, 0, 0, 0.85);
     color: white;
     padding: 25px 35px;
@@ -935,158 +605,79 @@ body{
     text-align: center;
     z-index: 2000;
     transition: transform 0.3s ease, opacity 0.3s ease;
-    opacity: 0;
 }
 .aviso_prox.show {
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
 }
-/* Menú lateral oculto */
-.menu_lateral {
-    transform: translateX(-270px);
-    opacity: 0;
-    transition: transform 0.35s ease, opacity 0.35s ease;
-}
-.menu_lateral.activo {
-    transform: translateX(0);
-    opacity: 1;
-}
-/* Overlay */
-.opacidad_menu_lateral {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.35s ease;
-}
-.opacidad_menu_lateral.activo {
-    opacity: 1;
-    visibility: visible;
-}
-/* Animación de items del menú */
-.menu_lateral .opc_menu {
-    opacity: 0;
-    transform: translateX(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-.menu_lateral.activo .opc_menu {
-    opacity: 1;
-    transform: translateX(0);
-}
-/* Hover moderno */
-.menu_lateral .opc_menu:hover {
-    background: rgba(255, 255, 255, 0.15);
-    transform: translateX(5px);
-}
-
-/* Botón hamburguesa animado */
-.btn_hamburguesa {
-    transition: opacity 0.25s ease, transform 0.25s ease;
-}
-
-.btn_hamburguesa.oculto {
-    opacity: 0;
-    transform: scale(0.8);
-    pointer-events: none;
-}
-
-/* animaciones para el cambio de contenido*/
-
-.contenido_detalle {
-    display: none;
-    opacity: 0;
-    transform: translateY(15px);
-    pointer-events: none;
-    transition: opacity 0.35s ease, transform 0.35s ease;
-}
-
-.contenido_detalle.activo {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-}
-
-/* Fade + slide para títulos y textos */
-.contenido_detalle h1,
-.contenido_detalle h4 {
-    animation: slideFade 0.6s ease forwards;
-}
-
-.contenido_detalle p,
-.contenido_detalle ul,
-.contenido_detalle ol {
-    animation: fadeIn 0.7s ease forwards;
-}
-
-@keyframes slideFade {
-    from { opacity: 0; transform: translateX(-10px); }
-    to   { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* estilo de imagenes de los contenidos */
-
-.img_contenido {
-    width: 50%;
-    max-width: 850px;
-    border-radius: 16px;
-    display: block;
-    margin: 18px auto;
-    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.img_contenido:hover {
-    transform: scale(1.02);
-    box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.35);
-}
-
-/* videos responsivos */
-
-.contenido_detalle iframe {
-    width: 100%;
-    max-width: 900px;
-    height: 420px;
-    border-radius: 12px;
-    display: block;
-    margin: 22px auto;
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.contenido_detalle iframe:hover {
-    transform: scale(1.01);
-    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.35);
-}
-
-@media (max-width: 768px) {
-    .contenido_detalle iframe {
-        height: 250px;
+/* -- ADAPTACIÓN A MÓVIL --- */
+@media (max-width: 1024px) {
+    .barra_superior{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        justify-content: space-between;
+        gap: 20px;
     }
-}
-
-/* estilo para las tarjetas de contenido */
-
-.tarjeta_contenido {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 10px;
-    border-radius: 12px;
-    transition: transform 0.25s ease, background 0.25s ease;
-    cursor: pointer;
-}
-
-.tarjeta_contenido:hover {
-    background: rgba(255, 255, 255, 0.25);
-    transform: translateX(5px);
-}
-
-.tarjeta_contenido img {
-    width: 55px;
-    height: 55px;
-    border-radius: 10px;
+    .barra_superior, .interfaz_principal {
+        margin-left: 0; 
+        width: 100%; 
+    }
+    .menu_lateral {
+        position: fixed;
+        top: 70px;
+        width: 300px;
+        height: calc(100vh - 70px);
+        left: 0;
+        transform: translateX(-300px); 
+        opacity: 0;
+        z-index: 1000;
+        padding-top: 0;
+    }
+    .menu_lateral .btn_despliegue_lat{
+        display: none;
+    }
+    .menu_lateral .contenido_lateral{
+        display: none;
+    }
+    .interfaz_principal{
+        padding-top: 90px;
+        margin-left: 0;
+        width: 100%;
+    }
+    .desp_contenido { 
+        flex-direction: column;
+        gap: 20px;
+    }
+    .contenido_central, .interfaz_opc_ad {
+        flex: auto;
+        min-width: 100%;
+        max-width: 100%;
+    }
+    .opc_principales {
+        flex-direction: column;
+        gap: 30px;
+        padding: 0 10px;
+    }
+    .opc_tactica, .opc_tecnica {
+        width: 100%; 
+        max-width: none;
+        margin: 0 auto;
+    }
+    .contenido_tactica, .contenido_tecnica{
+        margin: 20px 20px 0 20px;
+    }
+    #desc_cont{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    /* Mostrar el botón hamburguesa en móvil */
+    .btn_hamburguesa {
+        display: flex;
+    }
+    #pie_pagina{
+        margin-left: 0;
+        width: 100%;
+    }
 }
