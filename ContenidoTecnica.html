@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="EstilosContenidoTecTac.css">
-    <title>Contenidos Tecnicos</title>
+    <title>Contenidos Tecnicos - MkaFootball Academy</title>
 </head>
 <body>
     <section class="interfaz_tecnica">
         <header class="barra_superior_tecnica" id="cab_tecnica">
-            <a href="ProyectoPWMka.html">Volver</a> 
+            <div class="cont_volver">
+                <a href="index.html">Volver</a>
+            </div> 
             <h2>Contenidos Tecnicos</h2>
             <h3>6 Articulos Disponibles</h3>
             <p>Perfecciona tus habilidades individuales mediante entrenamiento progresivo.</p>
@@ -17,38 +19,38 @@
 
         <div class="pantalla_contenidos">
             <!-- LISTA IZQUIERDA -->
-    <aside class="lst_contenidos">
-        <h2>Contenidos</h2>
+            <aside class="lst_contenidos">
+                <h2>Contenidos</h2>
 
-        <div class="tarjeta_contenido" onclick="mostrarContenido('cont1')" style="background-image: url(Img/FondoEstadium.jpg);">
-            <span>Pase y Control</span>
-        </div>
+                <div class="tarjeta_contenido" onclick="mostrarContenido('cont1')" style="background-image: url(Img/FondoEstadium.jpg);">
+                    <span>Pase y Control</span>
+                </div>
 
-        <div class="tarjeta_contenido" onclick="mostrarContenido('cont2')" style="background-image: url(Img/FondoEstadium.jpg);">
-            <span>Regates y Movimientos</span>
-        </div>
+                <div class="tarjeta_contenido" onclick="mostrarContenido('cont2')" style="background-image: url(Img/FondoEstadium.jpg);">
+                    <span>Regates y Movimientos</span>
+                </div>
 
-        <div class="tarjeta_contenido" onclick="mostrarContenido('cont3')" style="background-image: url(Img/FondoEstadium.jpg);">
-            <span>Tiro a Portería</span>
-        </div>
+                <div class="tarjeta_contenido" onclick="mostrarContenido('cont3')" style="background-image: url(Img/FondoEstadium.jpg);">
+                    <span>Tiro a Portería</span>
+                </div>
 
-        <div class="tarjeta_contenido" onclick="mostrarContenido('cont4')" style="background-image: url(Img/FondoEstadium.jpg);">
-            <span>Control Orientado</span>
-        </div>
+                <div class="tarjeta_contenido" onclick="mostrarContenido('cont4')" style="background-image: url(Img/FondoEstadium.jpg);">
+                    <span>Control Orientado</span>
+                </div>
 
-        <div class="tarjeta_contenido" onclick="mostrarContenido('cont5')" style="background-image: url(Img/FondoEstadium.jpg);">
-            <span>Recepción Bajo Presión</span>
-        </div>
+                <div class="tarjeta_contenido" onclick="mostrarContenido('cont5')" style="background-image: url(Img/FondoEstadium.jpg);">
+                    <span>Recepción Bajo Presión</span>
+                </div>
 
-        <div class="tarjeta_contenido" onclick="mostrarContenido('cont6')" style="background-image: url(Img/FondoEstadium.jpg);">
-            <span>Perfil Corporal</span>
-        </div>
-    </aside>
+                <div class="tarjeta_contenido" onclick="mostrarContenido('cont6')" style="background-image: url(Img/FondoEstadium.jpg);">
+                    <span>Perfil Corporal</span>
+                </div>
+            </aside>
+        
+        <!-- CONTENIDO PRINCIPAL -->
+        <section class="contenido_mostrado">
 
-    <!-- CONTENIDO PRINCIPAL -->
-    <section class="contenido_mostrado">
-
-        <div id="cont1" class="contenido_detalle activo">
+            <div id="cont1" class="contenido_detalle activo">
             <h1>Pase y Control</h1>
             <img src="Img/Pase.png" alt="Pase y Control" class="img_contenido">
             <p>El Pase y Control (o Recepción) son el alma del juego, la base sobre la que se construye cualquier acción ofensiva colectiva. La calidad y precisión de estos dos elementos determinan la velocidad, el ritmo y la fluidez con la que un equipo puede progresar y mantener la posesión del balón.</p>
@@ -71,9 +73,9 @@
             </ul>
             <p>Un alto porcentaje de éxito en pase y control permite al equipo rival correr detrás del balón, aumentando su desgaste y reduciendo sus opciones de recuperación.</p>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/eM_VgIoDJwU?si=mDMlqKXTdyRKP6gA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
+            </div>
 
-        <div id="cont2" class="contenido_detalle">
+            <div id="cont2" class="contenido_detalle">
             <h1>Regates y Movimientos</h1>
             <img src="Img/Regate.jpg" alt="Regates y Movimientos" class="img_contenido">
             <p>Los Regates y Movimientos son las herramientas técnicas individuales utilizadas para superar a un adversario, generar un espacio de juego o escapar de la presión, creando así ventajas ofensivas.</p>
@@ -96,9 +98,9 @@
             </ul>
             <p>La combinación de un regate efectivo con un movimiento sin balón inteligente es la clave para desarmar defensas organizadas y acceder a zonas de finalización.</p>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/HrvNhc3WKnY?si=y6d-PiQ5InVmes6K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
+            </div>
 
-        <div id="cont3" class="contenido_detalle">
+            <div id="cont3" class="contenido_detalle">
             <h1>Tiro a Portería</h1>
             <img src="Img/TiroPorteria.png" alt="Tiro a Porteria" class="img_contenido">
             <p>El Tiro a Portería es la acción técnica de golpear el balón con la intención de introducirlo en la meta contraria. Es el momento cumbre del ataque y requiere una combinación de técnica depurada, precisión, potencia y, sobre todo, decisión.</p>
@@ -123,9 +125,9 @@
                 <li><b>Toma de Decisión:</b>La clave está en la velocidad de ejecución. El jugador debe identificar rápidamente el espacio libre (ej. el palo más lejano, por debajo del portero) y disparar antes de que el defensor pueda bloquear o el portero pueda reaccionar.</li>
             </ul>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/K8g-LZStmKw?si=CgNeyQhx9Q0Ur-Ak" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
+            </div>
 
-        <div id="cont4" class="contenido_detalle">
+            <div id="cont4" class="contenido_detalle">
             <h1>Control Orientado</h1>
             <img src="Img/ControlOrientadoç.png" alt="Control Orientado" class="img_contenido">
             <p>El Control Orientado es una técnica de recepción avanzada donde el jugador, al mismo tiempo que controla el balón, lo dirige de inmediato al espacio, superando a un rival o preparándolo para la siguiente acción de ataque (pase, tiro o conducción), sin necesidad de un segundo toque para acomodarlo.</p>
@@ -144,9 +146,9 @@
             </ul>
             <p>Un control orientado exitoso no solo mantiene la fluidez del ataque, sino que a menudo sirve como un mini-regate, superando la marca del jugador que venía a presionar la recepción.</p>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/Otc7cXDDF0g?si=ML_e_oXngNnWZySY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
+            </div>
 
-        <div id="cont5" class="contenido_detalle">
+            <div id="cont5" class="contenido_detalle">
             <h1>Recepción Bajo Presión</h1>
             <img src="Img/Recepcion.png" alt="Recepcion" class="img_contenido">
             <p>La Recepción Bajo Presión se refiere a la capacidad técnica y mental de un jugador para recibir y mantener el control del balón cuando un oponente está cerca, activo y buscando la intercepción o el robo.</p>
@@ -165,9 +167,9 @@
             </ul>
             <p>La confianza en la Recepción Bajo Presión permite a un equipo mantener la calma y la posesión incluso en zonas comprometidas del campo.</p>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/XNkwf8i-rjQ?si=GrnXZa4huy1QrbgE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
+            </div>
 
-        <div id="cont6" class="contenido_detalle">
+            <div id="cont6" class="contenido_detalle">
             <h1>Perfil Corporal</h1>
             <img src="Img/PerfilCorporal.png" alt="Perfil Corporal" class="img_contenido">
             <p>El Perfil Corporal (o Perfilación) es la posición y orientación del cuerpo del jugador con respecto al balón, a los compañeros, a los rivales y a la portería, en el momento de la recepción o el pase. No es un movimiento, sino una postura previa que facilita la ejecución de la técnica posterior.</p>
@@ -184,7 +186,15 @@
                 <li><b>Toma de Decisión:</b>La perfilación correcta acelera la toma de decisión, ya que el jugador no pierde tiempo girando o acomodándose, sino que ya está listo para soltar el balón al toque o conducir. Si el jugador está mal perfilado, casi siempre se verá obligado a dar un pase de seguridad hacia atrás o lateral.</li>
             </ul>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/FG4FindiFjc?si=5QmIoyazRu_3aCb0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
+            </div>
+        </section>
+    </section>
+
+    <footer class="pie_pagina">
+    <div class="msj_pie_pagina">
+        <p>© 2025 MkaFootball Academy. Todos los derechos reservados. Para amantes del fútbol</p>
+    </div>
+    </footer>
     <script src="FuncionalidadTacTec.js"></script>
 </body>
 </html>
