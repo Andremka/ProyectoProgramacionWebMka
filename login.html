@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="EstiloLogin.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>MkaFootball - Iniciar Sesión</title>
+</head>
+<body>
+    <main class="cont_principal_login">
+        <div class="tarjeta_login">
+            <div class="cont_logo_titulo">
+                <img src="Img/IconMkaFootball.png" alt="Logo MkaFootball" class="LogoMka">
+                <h1 class="tit_principal_login">MkaFootball Academy</h1>
+            </div>
+            <p class="subtitulo_login">Inicia sesión para acceder</p>
+
+            <form id="form_inicio_sesion" class="formulario_login">
+                <label for="correo_electronico" class="etiqueta_campo">Correo Electrónico</label>
+                <input type="email" id="correo_electronico" placeholder="tu@email.com" required>
+
+                <label for="contrasena" class="etiqueta_campo">Contraseña</label>
+                <input type="password" id="contrasena" placeholder="********" required>
+                
+                <button type="submit" id="btn_iniciar_sesion" class="btn_accion_login">Iniciar Sesión</button>
+            </form>
+            
+            <p class="msj_seguridad"><i class="fas fa-lock"></i> Tus datos están protegidos y seguros</p>
+        </div>
+    </main>
+
+    <script src="Funcionalidad_Login.js"></script>
+</body>
+</html>

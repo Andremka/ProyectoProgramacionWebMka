@@ -1,0 +1,107 @@
+/* Estilos Generales y Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+body{
+    background: #007bff;
+    color: #f8f9fa;
+}
+/* Fondo principal */
+.cont_principal_login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden; 
+}
+/* Tarjeta de Login */
+.tarjeta_login {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    z-index: 10; 
+}
+.cont_logo_titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.LogoMka {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+.tit_principal_login {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 5px;
+}
+.subtitulo_login {
+    color: #6c757d;
+    margin-bottom: 30px;
+}
+/* Formulario */
+.formulario_login {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.etiqueta_campo {
+    font-size: 0.9em;
+    color: #495057;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input[type="email"],
+input[type="password"] {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: var(--color-principal);
+    outline: none;
+}
+/* Botón de Acción */
+.btn_accion_login {
+    background-color: #0056b3;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+.btn_accion_login:hover {
+    background-color: #003366;
+}
+/* Mensaje de Seguridad */
+.msj_seguridad {
+    margin-top: 30px;
+    font-size: 0.8em;
+    color: black;
+}
+/* Responsividad para Movil */
+@media (max-width: 600px) {
+    .tarjeta_login {
+        padding: 30px 20px;
+    }
+    .tit_principal_login {
+        font-size: 1.5em;
+    } 
+}
