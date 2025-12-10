@@ -18,11 +18,11 @@ Apellidos: Mamani Kantuta -->
 
         <nav class="contenido_menu">
             <ul>
-                <li><a href="ProyectoPWMka.html" class="opc_menu activo"><i class="fas fa-home"></i><span>Inicio</span></a></li>
+                <li><a href="index.html" class="opc_menu activo"><i class="fas fa-home"></i><span>Inicio</span></a></li>
                 <li><a href="ContenidoTactica.html" class="opc_menu"><i class="fas fa-chess-board"></i><span>Táctica</span></a></li>
                 <li><a href="ContenidoTecnica.html" class="opc_menu"><i class="fas fa-running"></i><span>Técnica</span></a></li>
-                <li><a href="#" class="opc_menu"><i class="fas fa-medal"></i><span>Logros</span></a></li>
-                <li><a href="#" class="opc_menu"><i class="fas fa-chart-line"></i><span>Progreso</span></a></li>
+                <li><a href="perfil.html" class="opc_menu"><i class="fas fa-medal"></i><span>Logros</span></a></li>
+                <li><a href="perfil.html" class="opc_menu"><i class="fas fa-chart-line"></i><span>Progreso</span></a></li>
                 <li><a href="#" class="opc_menu"><i class="fas fa-newspaper"></i><span>Artículos</span></a></li>
             </ul>
         </nav>
@@ -31,16 +31,17 @@ Apellidos: Mamani Kantuta -->
 
     <header class="barra_superior">
         <div class="btn_hamburguesa"><i class="fas fa-bars"></i></div>
-        <div class="contenido_der">
-            <div class="cont_busqueda">
-            <input type="search" placeholder="Buscar..." class="busqueda">
-            <i class="icono_busqueda fas fa-search"></i>
-        </div>
-        <span class="icono_notificaciones"><i class="fas fa-bell"></i></span>
-        <div class="informacion_usuario">
-            <span id="saludo_usuario">Hola, Usuario</span>
-            <div class="icn_usuario"></div>
-        </div>
+            <div class="informacion_usuario">
+                <span id="saludo_usuario">Hola, Usuario</span>
+                <div class="icn_usuario" id="btn_menu_usuario"></div> 
+                    <div class="menu_desplegable_usuario" id="menu_usuario_desp">
+                    <ul>
+                        <li><a href="perfil.html" class="opc_usuario opc_perfil"><i class="fas fa-sign-in-alt"></i><span> Mi perfil</span></a></li>
+                        <li><a href="#" class="opc_usuario opc_soporte"><i class="fas fa-life-ring"></i><span> Soporte técnico</span></a></li>
+                        <li><a href="login.html" class="opc_usuario opc_salir"><i class="fas fa-sign-out-alt"></i><span> Cerrar sesión</span></a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </header>   
 
@@ -98,16 +99,20 @@ Apellidos: Mamani Kantuta -->
                         <h4>Articulos</h4>
                         <p>Contenido Exclusivo</p>
                     </article>
-                    <article id="opc_progreso">
-                        <img src="Img/ImgProgreso.png" alt="icn_progreso" id="icn_opc_adicionales">
-                        <h4>Progreso</h4>
-                        <p>Seguimiento Detallado</p>
-                    </article>
-                    <article id="opc_logros">
-                        <img src="Img/ImgLogros.png" alt="icn_logros" id="icn_opc_adicionales">
-                        <h4>Logros</h4>
-                        <p>Desbloquea Premios</p>
-                    </article>
+                    <a href="perfil.html" id="link_opc_progreso" style="text-decoration: none; color: black;">
+                        <article id="opc_progreso">
+                            <img src="Img/ImgProgreso.png" alt="icn_progreso" id="icn_opc_adicionales">
+                            <h4>Progreso</h4>
+                            <p>Seguimiento Detallado</p>
+                        </article>
+                    </a>
+                    <a href="perfil.html" id="link_opc_progreso" style="text-decoration: none; color: black;">
+                        <article id="opc_logros">
+                            <img src="Img/ImgLogros.png" alt="icn_logros" id="icn_opc_adicionales">
+                            <h4>Logros</h4>
+                            <p>Desbloquea Premios</p>
+                        </article>
+                    </a>
                 </nav>
             </aside>
         </div>
@@ -165,9 +170,9 @@ Apellidos: Mamani Kantuta -->
                     <a href="#">YouTube</a>
                     <a href="#">Instagram</a>
                 </nav>
-                <form class="suscripcion_noticias">
-                    <label for="">Para recibir Novedades...</label>
-                    <input type="email" placeholder="Ingresa tu Correo: ">
+                <form class="suscripcion_noticias" id="form_suscripcion">
+                    <label for="input_correo_suscripcion">Para recibir Novedades...</label>
+                    <input type="email" id="input_correo_suscripcion" placeholder="Ingresa tu Correo: ">
                     <button type="submit">Enviar</button>
                 </form>
             </section>
