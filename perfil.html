@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="EstiloPerfilLogros.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Mi Perfil - MkaFootball Academy</title>
+</head>
+<body>
+    <header class="barra_superior_perfil">
+        <div class="cont_volver">
+            <a href="index.html">Volver</a>
+        </div>
+        <div class="cont_logo_titulos">
+            <img src="Img/IconMkaFootball.png" alt="Logo Mka" class="LogoMka">
+            <div class="cont_textos_titulo">
+                <h1 class="tit_principal">Mi Perfil</h1>
+                <h2 class="tit_secundario">Centro de Control y Rendimiento</h2>
+            </div>
+        </div>
+    </header>
+    <main class="interfaz_principal">
+        <div class="cont_datos_cuenta">
+            <section class="seccion_inf_usuario">
+                <h3>Datos Personales</h3>
+                <form id="formDatosPersonales">
+                    <div class="cont_perfil">
+                        <h4>Nombre</h4>
+                        <input type="text" name="nombre" id="nombre">
+                        <h4>Apellidos</h4>
+                        <input type="text" name="apellidos" id="apellidos">
+                        <h4>Email</h4>
+                        <input type="email" name="email" id="email">
+                        <h4>Telefono</h4>
+                        <input type="number" name="telefono" id="telefono">
+                        <h4>Genero</h4>
+                        <div class="grupo-radio">
+                            <label><input type="radio" name="genero" id="gen-nd">No definido</label>
+                            <label><input type="radio" name="genero" id="gen-h">Hombre</label>
+                            <label><input type="radio" name="genero" id="gen-m">Mujer</label>
+                        </div>
+                        <button id="btnGuardarDatos" type="submit">Guardar</button>
+                    </div>
+                </form>
+            </section>
+            <section class="seccion_configuracion_cuenta">
+                <h3>Configuración de la Cuenta</h3>
+                <form id="formCuenta">
+                    <div class="cont_cuenta">
+                        <h4>Usuario</h4>
+                        <input type="text" name="usuario" id="usuario">
+                        <h4>Contraseña</h4>
+                        <input type="password" name="password" id="password">
+                        <h6>*Introduzca la contraseña solo en caso que desee cambiarla</h6>
+                        <button id="btnGuardarCuenta" type="submit">Guardar Cambios</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+        <div class="cont_progreso_logros">
+            <section class="seccion_estadisticas">
+                <h3>Mi Progreso </h3>
+                <article class="estadistica_progreso" id="progresoTecnica">
+                    <h4>Porcentaje de Contenidos Técnicos</h4>
+                    <div class="barra_progreso">
+                        <div class="relleno_barra_progreso" data-porcentaje="45" id="rellenoTecnica">
+                            <span class="etiqueta_porcentaje" id="porcentajeTecnica">45%</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="estadistica_progreso" id="progresoTactica">
+                    <h4>Porcentaje de Contenidos Tácticos</h4>
+                    <div class="barra_progreso">
+                        <div class="relleno_barra_progreso" data-porcentaje="100" id="rellenoTactica">
+                            <span class="etiqueta_porcentaje" id="porcentajeTactica">100%</span>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <section class="seccion_logros">
+                <h3>Logros Desbloqueados</h3>
+                <div class="logros_obtenidos">
+                    <div class="logro1">
+                        <i class="fas fa-star logro_desbloqueado" id="logroTacticoIcon"></i>
+                        <h5>Maestro de las Tacticas</h5>
+                    </div>
+                    <div class="logro2">
+                        <i class="fas fa-trophy logro_pendiente" id="logroTecnicoIcon"></i>
+                        <h5>Dominador de tecnicas</h5>
+                    </div>
+                </div>
+            </section>
+        </div> 
+    </main>
+    <footer class="pie_pagina">
+        <div class="msj_pie_pagina">
+            <p>© 2025 MkaFootball Academy. Todos los derechos reservados. Para amantes del fútbol</p>
+        </div>
+    </footer>
+    <script src="Func_Perfil.js"></script>
+    </body>
+</html>

@@ -1,0 +1,331 @@
+/* --- Estilos Generales --- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+body{
+    background: #aeddfe; 
+    color: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+/* * * Interfaz de Perfil - Progreso - Estadisticas * * */
+.interfaz_principal{
+    width: 95%;
+    max-width: 1200px;
+    margin: 25px auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 25px;
+    flex-grow: 1;
+}
+/* --- Barra superior --- */
+.barra_superior_perfil{
+    padding: 20px;
+    background: white;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    border-bottom: 2px solid #e0e0e0;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+}
+.cont_volver a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    background: #0072ff;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1em;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+.cont_logo_titulos {
+    display: flex;
+    align-items: center; 
+    gap: 15px; 
+}
+.cont_textos_titulo {
+    display: flex;
+    flex-direction: column; 
+}
+.cont_logo_titulos h1 {
+    font-size: 2.5em;
+    margin-top: 0;
+    color: #033684;
+    line-height: 1.1;
+}
+.cont_logo_titulos h2 {
+    font-size: 1.5em;
+    color: #005fa3;
+    font-weight: 600;
+    margin-bottom: 0;
+    line-height: 1.1;
+}
+.cont_volver a:hover{
+    background: #0053b3;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.30);
+}
+.LogoMka{
+    width: 60px;
+    height: 60px;
+}
+/* ----- MAIN ------*/
+.cont_datos_cuenta {
+    display: flex;
+    flex-direction: column; /* Apila Datos Personales sobre Configuración */
+    gap: 25px;
+    min-width: 100px;
+}
+.cont_progreso_logros {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column; /* Apila Progreso sobre Logros */
+    gap: 25px;
+    width: 100%;
+}
+/* ESTILOS PARA LAS SECCIONES*/
+.seccion_estadisticas,
+.seccion_logros {
+    background: none; 
+    padding: 0; 
+    height: max-content;
+    flex-grow: 1; 
+}
+.progreso_contenidos{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: auto;
+    background: none;
+    padding: 0;
+    box-shadow: none;
+    height: max-content;
+}
+.seccion_inf_usuario,
+.seccion_configuracion_cuenta {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    height: max-content;
+    flex-grow: 1; 
+}
+/* --- Seccion Datos Personales y Contraseña --- */
+.cont_perfil,
+.cont_cuenta {
+    width: auto; 
+    gap: 0; 
+    background: none;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+}
+.cont_perfil h4, .cont_cuenta h4, .estadistica_progreso h4 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #033684;
+}
+.cont_perfil input[type="text"],
+.cont_perfil input[type="email"],
+.cont_perfil input[type="number"],
+.cont_cuenta input[type="text"],
+.cont_cuenta input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+.cont_perfil button, .cont_cuenta button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #0072ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background 0.3s ease;
+    margin-top: 15px;
+}
+.cont_perfil button:hover, .cont_cuenta button:hover {
+    background: #0053b3;
+}
+.cont_cuenta h6 {
+    font-size: 0.8em;
+    color: #888;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+.grupo-radio { /* Nueva clase para agrupar las opciones de género */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.grupo-radio label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+/* --- Seccion Progreso --- */
+.progreso_contenidos{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 10px;
+}
+.progreso_contenidos > * { 
+    flex: 1; /* Ocupan el mismo ancho */
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    width: auto; /* Asegura que no tengan un ancho fijo */
+}
+.barra_progreso {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    height: 25px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.relleno_barra_progreso {
+    height: 100%;
+    background-color: #007bff; 
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transition: width 1s ease-in-out;
+}
+#rellenoTactica {
+    background-color: #4CAF50; 
+}
+.etiqueta_porcentaje {
+    padding: 0 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+/* --- Seccion Logros --- */
+.logros_obtenidos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 15px;
+}
+.logro1, .logro2 {
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    flex-basis: calc(50% - 10px);
+}
+.logro_desbloqueado {
+    color: gold; /* Color para logro desbloqueado */
+    font-size: 2.5em;
+    margin-bottom: 5px;
+}
+.logro_pendiente {
+    color: #ccc; /* Color para logro pendiente */
+    font-size: 2.5em;
+    margin-bottom: 5px;
+}
+.logro1 h5, .logro2 h5 {
+    font-size: 0.9em;
+    font-weight: 500;
+}
+/* --- Pie Pagina --- */
+.pie_pagina {
+    background: #003366; /* Color más profundo */
+    color: white;
+    padding-top: 30px;
+    font-family: Arial, sans-serif;
+    margin-top: auto;
+}
+.msj_pie_pagina {
+    text-align: center;
+    padding: 15px 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    background-color: #00264d; 
+    margin-top: 20px;
+}
+.msj_pie_pagina p {
+    font-size: 14px;
+    opacity: 0.7;
+}
+/* --- Responsividad para Movil --- */
+@media (max-width: 768px){ 
+    .barra_superior_perfil {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .cont_logo_titulos {
+        flex-direction: row;
+        width: 100%;
+    }
+    .LogoMka {
+        width: 40px;
+        height: 40px;
+    }
+    .cont_logo_titulos h1 {
+        font-size: 1.8em;
+    }
+    .cont_logo_titulos h2 {
+        font-size: 1.1em;
+    }
+    .interfaz_principal {
+        width: 90%;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+    }
+    .col_datos_cuenta,
+    .cont_progreso_logros {
+        width: 100%;
+    }
+    .seccion_inf_usuario,
+    .seccion_configuracion_cuenta,
+    .seccion_estadisticas,
+    .seccion_logros {
+        width: 100%;
+    }
+    .logro1, .logro2 {
+        flex-basis: calc(50% - 10px); /* Se mantiene 2 por fila para aprovechar el espacio */
+    }
+}
+/* --- Responsividad para Tablet/PC (min-width: 769px) --- */
+@media (min-width: 769px) {
+    .cont_datos_cuenta {
+        width: 100%;
+    }
+    .cont_progreso_logros {
+        width: 100%;
+    }
+    .progreso_contenidos {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+}
